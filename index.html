@@ -1,515 +1,1205 @@
----
-layout: default
----
-
-<div class='other-pages'>
-<!-- <style>
-  body {
-    background-image: url('/assets/images/bg3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-</style> -->
-
-
-  <!-- <style type="text/css">
-    /* Auto-hide profile photo */
-    @media screen and (max-width: 700px) {
-      div#profile_photo { display: none }
-    } 
-  </style> -->
-
-  <div id="profile_photo">
-    <img src="{{ '/assets/images/wkl1.jpg' | relative_url }}" width="200" height="297" style="border-radius: 0%; float: left; padding-right: 20px; padding-left: 10px; padding-top: 0px; padding-bottom: 10px"/>
-  </div>
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///Users/wangkailong/Projects/academic-website/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <!-- <br/> -->
-  <style type="text/css">
-    /* Auto-hide profile photo */
-    @media screen and (min-width: 700px) {
-      div#site-title-na { display: none }
-    } 
-  </style>
-  <div id="site-title-na"><h3>Bio</h3></div>
-	<!-- <p>I am currently a Ph.D. student working in <a href="https://www.comp.nus.edu.sg/"> School of Computing</a>, <a href="https://www.nus.edu.sg"> National University of Singapore</a>, supervised by <a href="https://www.comp.nus.edu.sg/~dongjs/"> Prof. Dong Jin Song</a>.</p>
-     
-  <p>My research interests include trustworthy AI, graph neural networks and many other computer science topics.</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wang Kailong | Associate Professor, HUST</title>
+  <link rel="icon" type="image/jpeg" href="./avatar.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./index_files/css2" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <p>I got my Master's and B.Eng. degree in <a href="https://www.nus.edu.sg"> NUS</a> and <a herf="https://en.wikipedia.org/wiki/Xidian_University"> Xidian University</a> respectively.</p> -->
-  <p>I am currently an associate professor in the <a href="https://cse.hust.edu.cn/"> School of CSE </a> at <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology (HUST)</a>. I worked as a research fellow in the <a href="https://www.comp.nus.edu.sg/">School of Computing (SoC)</a>, <a href="https://www.nus.edu.sg/"> National University of Singapore (NUS)</a> from 2021 to 2023. I received my PhD degree from SoC NUS. Prior to that, I obtained my bachelor's degree with the first class honours from <a href="https://www.ntu.edu.sg/">Nanyang Technological University (NTU)</a>.</p>
+    :root {
+      --navy:    #1a2744;
+      --blue:    #1a4fc4;
+      --blue-lt: #dbeafe;
+      --gray-50: #f9fafb;
+      --gray-100:#f3f4f6;
+      --gray-200:#e5e7eb;
+      --gray-500:#6b7280;
+      --gray-700:#374151;
+      --gray-900:#111827;
+      --red:     #b91c1c;
+      --green:   #15803d;
+      --font-sans:"Inter", system-ui, sans-serif;
+      --font-serif:"Source Serif 4", Georgia, serif;
+      --sidebar-w: 260px;
+      --content-max: 820px;
+    }
 
-  <p>I am broadly interested in Trustworthy AI, Secure and Private Software Engineering. In particular, my current research focuses on the Safety and Ethics Assessment as well as Interpretability and Explainability of Large Language Models. I have published in various top-tier conferences and journals such as OOPSLA, NDSS, MobiCom, TSE, TOSEM, ICSE, FSE, ASE, ISSTA and WWW.</p>
-  <p>
-    <a href="https://scholar.google.com/citations?hl=en&user=WpOnslgAAAAJ"><img src="https://img.shields.io/badge/Google%20Scholar--green?style=social&logo=GoogleScholar" style="display:inline" alt='Google Scholar'></a> 
-    <!-- <a href="https://dblp.org/pid/134/1902.html"><img src="https://img.shields.io/badge/DBLP--green?style=social&logo=dblp" style="display:inline" alt='dblp'> </a> |
-    <a href="https://github.com/cs-sun"><img src="https://img.shields.io/badge/GitHub--green?style=social&logo=github" style="display:inline" alt='GitHub'></a> |
-    <a href="https://www.linkedin.com/in/changshengsun/"><img src="https://img.shields.io/badge/LinkedIn--green?style=social&logo=Linkedin" style="display:inline" alt='Linkedin'></a> |
-    <a href="https://twitter.com/changsheng_sun"><img src="https://img.shields.io/badge/Twitter--green?style=social&logo=twitter" style="display:inline" alt='Twitter'></a> |
-    <a href="{{ '/friends.html' | relative_url }}"> <img src="https://img.shields.io/badge/Friends--green?style=social&logo=GitHubSponsors" style="display:inline" alt='Friends'> </a> | -->
-    <!-- <a href="{{ '/cal.html' | relative_url }}"> <img src="https://img.shields.io/badge/Calendar--green?style=social&logo=GoogleCalendar" style="display:inline" alt='Calendar'> </a> -->
-  </p>
-  <!-- <p>I obtained my Master's degree in <a href="https://www.comp.nus.edu.sg/"> School of Computing</a>, <a href="https://www.nus.edu.sg"> National University of Singapore</a> in 2021. Before that, I got my B.Eng. degree in the <a href="https://cs.xidian.edu.cn">School of Computer Science and Technology</a>, <a herf="https://en.wikipedia.org/wiki/Xidian_University">Xidian University</a> in 2019. </p> -->
-  
+    html { scroll-behavior: smooth; }
 
+    body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--gray-900);
+      background: #fff;
+    }
 
-  <!-- <b> -> See my <a href="{{ '/blog.html' | relative_url }}">Blog Posts</a>.</b> <br/><br/> -->
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
+    /* ── Top Nav ─────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 52px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    }
 
-  <!-- <a class="page-link" href="{{ '/cal.html' | relative_url }}">&#128197; <b>My free/busy calendar</b></> -->
-  </br>
-  <div><h3>NEWS</h3></div>
-  <!-- See More <a href="{{ site.baseurl }}/publications.html">Publications</a> -->
-  <!-- <b>See More at -> </b>
-  <a href="https://scholar.google.com/citations?user=1M5_gpIAAAAJ">[Google Scholar]</a>
-  <a href="https://dblp.org/pid/134/1902.html"> [dblp: Changsheng Sun]</a>
-  <br/> -->
-	<p>
-		<ul>
-    
-      <!-- <a style="color:red;" > [New!] </a> -->
-      <!-- <b><a href="assets/papers/InputReflector-Paper.pdf"> Repairing Failure-inducing Inputs with Input Reflection.</a></b> -->
-	  <li>[17 Dec 2025] Two papers accepted by ICSE 2026. Congratulations to Xinyi!</li> 
-	  <li>[8 Nov 2025] Two papers accepted by AAAI 2026.</li> 
-	  <li>[22 Sep 2025] Our survey paper <i>Large language models for cyber security: A systematic literature review</i> is accepted by TOSEM. Congratulations to Hanxiang!</li> 
-      <li>[7 Jul 2025] Our paper <i>SPOLRE: Semantic Preserving Object Layout Reconstruction for Image Captioning System Testing</i> is accepted by TOSEM. Congratulations to Guanyu and Yi!</li>
-      <li>[18 Jun 2025] I join the Program Committee of FSE 2026.</li>
-      <li>[20 Mar 2025] Our paper <i>NeuSemSlice: Towards Effective DNN Model Maintenance via Neuron-level Semantic Slicing</i> is accepted by TOSEM. Congratulations to Shide!</li>
-      <li>[20 Jan 2025] Two papers accepted by ICSE 2025. Congratulations to Shide and Yuqing!</li>	
-      <li>[18 Dec 2024] I am serving as the publication chair for IWQoS 2025.</li>
-      <li>[11 Dec 2024] Our paper <i>MiniScope: Automated UI Exploration and Privacy Inconsistency Detection of MiniApps via Two-phase Iterative Hybrid Analysis</i> is accepted by TOSEM. Congratulations to Shenao!</li>		
-      <li>[27 Aug 2024] Our survey paper <i>Large Language Models for Software Engineering: A Systematic Literature Review</i> is accepted by TOSEM. Congratulations to Xinyi!</li>
-      <li>[24 Aug 2024] Two papers (full) accepted by ASE Industry Showcase Track. Congratulations to Xinyi, Jian and Shenao!</li>
-      <li>[14 Aug 2024] I am serving as a PC member for WWW 2025.</li>
-      <li>[7 Aug 2024] Two papers accepted by ASE 2024. Congratulations to Baijun, Zhibo and Yuxi!</li>
-      <li>[13 Jun 2024] Our paper <i>Drowzee: Metamorphic Testing for Fact-conflicting Hallucination Detection in Large Language Models</i> is accepted by OOPSLA 2024. Congratulations to Ningke!</li>
-      <li>[21 Feb 2024] Our paper <i>MeTMaP: Metamorphic Testing for Detecting False Vector Matching Problems in LLM Augmented Generation</i> is accepted by FORGE 2024. Congratulations to Guanyu and Yi!</li>
-      <li>[1 Feb 2024] Two papers accepted by WWW 2024, congratulations to Liuhuo!</li>
-      <li>[23 Jan 2024] Our paper <i>Glitch Tokens in Large Language Models: Categorization Taxonomy and Effective Detection</i> is accepted by FSE 2024. Congratulations to Yuxi and Yi!</li>
-      <li>[4 Jan 2024] Our paper <i>Beyond Fidelity: Explaining Vulnerability Localization of Learning-based Detectors</i> is accepted by TOSEM. Congratulations to Baijun!</li>
-      <li>[1 Jan 2024] I am serving as PC member for WWW, LCTES, FORGE, Internetware, ICECCS 2024 this year!</li>
-     
+    nav .brand {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+      white-space: nowrap;
+    }
 
-		</ul>
-	</p>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.25rem;
+    }
 
-  </br>
-  <div><h3>PUBLICATIONS -- <a href="https://scholar.google.com/citations?hl=en&user=WpOnslgAAAAJ">Full List (# denotes corresponding author)</a></h3></div>
-  <!-- See More <a href="{{ site.baseurl }}/publications.html">Publications</a> -->
-  <!-- <b>See More at -> </b>
-  <a href="https://scholar.google.com/citations?user=1M5_gpIAAAAJ">[Google Scholar]</a>
-  <a href="https://dblp.org/pid/134/1902.html"> [dblp: Changsheng Sun]</a>
-  <br/> -->
-	<p>
-		<ul>
-		<li>
-      <b> Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving</b>  <br/>
-      Xinyi Zheng, Ningke Li, Xiaokun Luan, <u>Kailong Wang#</u>, Ling Shi, Meng Sun and Haoyu Wang
-      <br/>
-       IEEE/ACM International Conference on Software Engineering (ICSE), 2026.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-	  <li>
-      <b> ADARULE: LLM-Driven Natural Language to LTL Conversion via Pattern-Adaptive Rule Induction</b>  <br/>
-      Jiayi Hu, Jingling Sun, Chong Wang, Yihao Huang, Jincao Feng, Yilongfei Xu, Yong Li, <u>Kailong Wang</u>, Weikai Miao, Jin Song Dong and Geguang Pu
-      <br/>
-       IEEE/ACM International Conference on Software Engineering (ICSE), 2026.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-	 <li>
-      <b> STEAMROLLER: A Multi-Agent System for Inclusive Automatic Speech Recognition for People who Stutter</b>  <br/>
-      Ziqi Xu, Yi Liu, Yuekang Li, Ling Shi, <u>Kailong Wang</u>, and Yongxin Zhao 
-      <br/>
-       The 40th Annual AAAI Conference on Artificial Intelligence, 2026.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-	 <li>
-      <b> On the Feasibility of Using MultiModal LLMs to Execute AR Social Engineering Attacks</b>  <br/>
-      Ting Bi, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, <u>Kailong Wang</u>, Liting Zhou, Yang Yang, and Tianlong Yu 
-      <br/>
-       The 40th Annual AAAI Conference on Artificial Intelligence, 2026.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-	   <li>
-      <b>Large language models for cyber security: A systematic literature review</b>  <br/>
-      Hanxiang Xu, Shenao Wang, Ningke Li, <u>Kailong Wang#</u>, Yanjie Zhao, Kai Chen, Ting Yu, Yang Liu, and Haoyu Wang
-      <br/>
-       ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2405.04760"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-	   <li>
-      <b>SEAR: A Multimodal Dataset for Analyzing AR-LLM-Driven Social Engineering Behaviors</b>  <br/>
-      Tianlong Yu, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, Kailong Wang, Liting Zhou, Yang Yang, and Ting Bi
-      <br/>
-       The 33rd ACM International Conference on Multimedia (MM), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2505.24458"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-      <li>
-      <b>SPOLRE: Semantic Preserving Object Layout Reconstruction for Image Captioning System Testing</b>  <br/>
-      Yi Liu, Guanyu Wang, Xinyi Zheng, Gelei Deng, <u>Kailong Wang#</u>, Yang Liu, and Haoyu Wang
-      <br/>
-       ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2407.18512"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-    </li> 
-       <br/>
-      <li>
-      <b>Position: Trustworthy AI Agents Require the Integration of Large Language Models and Formal Methods</b>  <br/>
-      Yedi Zhang, Yufan Cai, Xinyue Zuo, Xiaokun Luan, <u>Kailong Wang</u>, Zhe Hou, Yifan Zhang, Zhiyuan Wei, Meng Sun, Jun Sun, Jing Sun, and Jin Song Dong 
-      <br/>
-       International Conference on Machine Learning (ICML), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2412.06512"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-       <br/>
-      <li>
-      <b>NeuSemSlice: Towards Effective DNN Model Maintenance via Neuron-level Semantic Slicing</b>  <br/>
-      Shide Zhou, Tianlin Li, <u>Kailong Wang#</u>, Yihao Huang, Ling Shi, Yang Liu, and Haoyu Wang.
-      <br/>
-      ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2407.20281"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-       <br/>
-     <li>
-      <b>Understanding the Effectiveness of Coverage Criteria for Large Language Models: A Special Angle from Jailbreak Attacks</b>  <br/>
-      Shide Zhou, Tianlin Li, <u>Kailong Wang#</u>, Yihao Huang, Ling Shi, Yang Liu, and Haoyu Wang.
-      <br/>
-      IEEE/ACM International Conference on Software Engineering (ICSE), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2408.15207"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-    <li>
-      <b>Decoding Secret Memorization in Code LLMs Through Token-Level Characterization</b>  <br/>
-      Yuqing Nie, Chong Wang, <u>Kailong Wang#</u>, Guoai Xu, Guosheng Xu, and Haoyu Wang.
-      <br/>
-      IEEE/ACM International Conference on Software Engineering (ICSE), 2025.
-      <br/>
-      <a href="https://arxiv.org/pdf/2410.08858"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-      <li>
-      <b>MiniScope: Automated UI Exploration and Privacy Inconsistency Detection of MiniApps via Two-phase Iterative Hybrid Analysis</b>  <br/>
-      Shenao Wang, Yuekang Li, <u>Kailong Wang#</u>, Yi Liu, Hui Li, Yang Liu and Haoyu Wang.
-      <br/>
-      ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.
-      <br/>
-      <a href="https://arxiv.org/pdf/2401.03218"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-     <li>
-      <b>Large Language Models for Software Engineering: A Systematic Literature Review</b>  <br/>
-      Xiniyi Hou, Yanjie Zhao, Yue Liu, Zhou Yang, <u>Kailong Wang</u>, Li Li, Xiapu Luo, David Lo, John Grundy and Haoyu Wang.
-      <br/>
-      ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.
-      <br/>
-      <a href="https://arxiv.org/pdf/2308.10620"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-    <li>
-      <b>GlitchProber: Advancing Effective Detection and Mitigation of Glitch Tokens in Large Language Models</b> <br/>
-      Zhibo Zhang, Wuxia Bai, Yuxi Li, Mark Huasong Meng, <u>Kailong Wang#</u>, Ling Shi, Li Li, Jun Wang and Haoyu Wang.
-      <br/>
-      IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.
-      <br/>
-      <a href="https://arxiv.org/pdf/2408.04905"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-			
-    <li>
-      <b>Semantic-Enhanced Indirect Call Analysis with Large Language Models</b> <br/>
-      Baijun Cheng, Cen Zhang, <u>Kailong Wang#</u>, Ling Shi, Yang Liu, Haoyu Wang, Yao Guo and Xiangqun Chen.
-      <br/>
-      IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.
-      <br/>
-      <a href="https://arxiv.org/pdf/2408.04344"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
+    nav ul a {
+      color: rgba(255,255,255,.8);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background .15s, color .15s;
+    }
 
-    <li>
-      <b>Towards Robust Detection of Open Source Software Supply Chain Poisoning Attacks in Industry Environments</b> <br/>
-      Xinyi Zheng, Chen Wei, Shenao Wang, Yanjie Zhao, Peiming Gao, Yuanchao Zhang, <u>Kailong Wang#</u>, and Haoyu Wang.
-      <br/>
-      IEEE/ACM International Conference on Automated Software Engineering (ASE) Industry Showcase, 2024.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-    <li>
-      <b>Models Are Codes: Towards Measuring Malicious Code Poisoning Attacks on Pre-trained Model Hubs</b> <br/>
-      Jian Zhao, Shenao Wang, Yanjie Zhao, Xinyi Hou, <u>Kailong Wang</u>, Peiming Gao, Yuanchao Zhang, Chen Wei and Haoyu Wang.
-      <br/>
-      IEEE/ACM International Conference on Automated Software Engineering (ASE) Industry Showcase, 2024.
-      <br/>
-      <a href=""><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
-    <li>
-      <b>Drowzee: Metamorphic Testing for Fact-conflicting Hallucination Detection in Large Language Models</b> <br/>
-      Ningke Li, Yuekang Li, Yi Liu, Ling Shi, <u>Kailong Wang#</u>, Haoyu Wang.
-      <br/>
-      Object-Oriented Programming, Systems, Languages & Applications (OOPSLA), 2024.
-      <br/>
-      <a href="https://arxiv.org/abs/2405.00648"><img src="https://img.shields.io/badge/ACM-Paper-green?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-      
-    </li> 
-    <br/>
+    nav ul a:hover {
+      color: #fff;
+      background: rgba(255,255,255,.12);
+      text-decoration: none;
+    }
 
-    <li>
-        <b> Glitch Tokens in Large Language Models: Categorization Taxonomy and Effective Detection</b> <br/>
-        Yuxi Li, Yi Liu, Gelei Deng, Ying Zhang, Wenjia Song, Ling Shi, <u>Kailong Wang#</u>, Yuekang Li, Yang Liu, Haoyu Wang.
-        <br/>
-        ACM SIGSOFT International Symposium on the Foundations of Software Engineering (FSE), 2024.
-        <br/>
-        <a href="https://arxiv.org/abs/2404.09894"><img src="https://img.shields.io/badge/ACM-Paper-blue?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    /* ── Layout ──────────────────────────────────── */
+    .page {
+      display: flex;
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-      <li>
-        <b> Metmap: Metamorphic Testing for Detecting False Vector Matching Problems in LLM Augmented Generation</b> <br/>
-        Guanyu Wang, Yuekang Li, Yi Liu, Gelei Deng, Tianlin Li, Guosheng Xu, Yang Liu, Haoyu Wang, <u>Kailong Wang#</u>.
-        <br/>
-        AI Foundation Models and Software Engineering (FORGE), 2024.
-        <br/>
-        <a href="https://arxiv.org/abs/2402.14480"><img src="https://img.shields.io/badge/ACM-Paper-blue?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    /* ── Sidebar ─────────────────────────────────── */
+    .sidebar {
+      width: var(--sidebar-w);
+      min-width: var(--sidebar-w);
+      padding: 2.5rem 1.5rem 2.5rem 0;
+    }
 
-      <li>
-        <b> Beyond Fidelity: Explaining Vulnerability Localization of Learning-based Detectors</b> <br/>
-        Baijun Cheng, Shengming Zhao, <u>Kailong Wang#</u>, Meizhen Wang, Guangdong Bai, Ruitao Feng, Yao Guo, Lei Ma, Haoyu Wang.
-        <br/>
-        ACM Transactions on Software Engineering and Methodology (TOSEM), 33(5):1-33, June 2024.
-        <br/>
-        <a href="https://dl.acm.org/doi/abs/10.1145/3641543"><img src="https://img.shields.io/badge/ACM-Paper-blue?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .sidebar-inner {
+      position: sticky;
+      top: 72px;
+    }
 
-      <li>
-        <b> Don't Bite Off More Than You Can Chew: Investigating Excessive Permission Requests in Trigger-action Integrations</b> <br/>
-        Liuhuo Wan, <u>Kailong Wang#</u>, Kulani Tharaka Mahadewa, Haoyu Wang, Guangdong Bai.
-        <br/>
-        The Web Conference (WWW), 2024.
-        <br/>
-        <a href="https://dl.acm.org/doi/abs/10.1145/3589334.3645721"><img src="https://img.shields.io/badge/ACM-Paper-blue?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .profile-photo {
+      width: 160px;
+      border-radius: 6px;
+      display: block;
+      margin-bottom: 1rem;
+    }
 
-      <li>
-        <b> Is It Safe To Share Your Files? An Empirical Security Analysis of Google Workspace</b> <br/>
-        Liuhuo Wan, <u>Kailong Wang#</u>, Haoyu Wang, Guangdong Bai.
-        <br/>
-        The Web Conference (WWW), 2024.
-        <br/>
-        <a href="https://dl.acm.org/doi/abs/10.1145/3589334.3645697"><img src="https://img.shields.io/badge/ACM-Paper-blue?style=social&logo=acm" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .profile-photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a2744 0%, #2563eb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border: 3px solid var(--gray-200);
+    }
 
-      <li>
-        <b> Masterkey: Automated Jailbreak of Multiple Large Language Model Chatbots</b> <br/>
-        Gelei Deng, Yi Liu, Yuekang Li, <u>Kailong Wang</u>, Ying Zhang, Zefeng Li, Haoyu Wang, Tianwei Zhang, Yang Liu.
-        <br/>
-        Network and Distributed System Security Symposium (NDSS), 2024.
-        <br/>
-        <a href="https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf"><img src="https://img.shields.io/badge/arXiv-Paper-green?style=social&logo=arxiv" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .sidebar h1 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
 
-      <li>
-        <b> Pandora: Jailbreak GPTs by Retrieval Augmented Generation Poisoning</b> <br/>
-        Gelei Deng, Yi Liu, <u>Kailong Wang</u>, Yuekang Li, Tianwei Zhang, Yang Liu.
-        <br/>
-        NDSS-AISCC, 2024.
-        <br/>
-        <a href="https://www.ndss-symposium.org/wp-content/uploads/aiscc2024-18-paper.pdf"><img src="https://img.shields.io/badge/arXiv-Paper-green?style=social&logo=arxiv" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .sidebar .cjk {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+    }
 
-      <li>
-        <b> Essential or Excessive? Mindaext: Measuring Data Minimization Practices among Browser Extensions</b> <br/>
-        Yuxi Ling, Yun Hao, Yuyan Wang, <u>Kailong Wang</u>, Guangdong Bai, Jin Song Dong.
-        <br/>
-        The IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), 2024.
-        <br/>
-        <a href="https://yuxiling.github.io/files/2024010163.pdf"><img src="https://img.shields.io/badge/IEEE-Paper-green?style=social&logo=ieee" style="display:inline" alt='Paper(PDF)'></a>
-        
-      </li> 
-      <br/>
+    .sidebar .position {
+      font-size: 0.82rem;
+      color: var(--gray-700);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
 
+    .sidebar .position strong {
+      display: block;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
 
-		</ul>
-	</p>
+    .contact-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--gray-700);
+    }
 
-<!-- 
-  <div><h3>EDUCATION</h3></div>
-    <ul>
-      <li>
-        <b>Doctor of Philosophy</b> (Computer Science) 
-        (2022 - present &nbsp) 
-        <br/> School of Computing, National University of Singapore, Singapore. 
-        <br/>
-      </li>
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-      <li>
-        <b>Master of Computing</b> (Artificial Intelligence)
-        (2020 - 2021) 
-        <br/> School of Computing, National University of Singapore, Singapore. 
-        <br/>
-      </li>
+    .contact-list .icon {
+      flex-shrink: 0;
+      width: 16px;
+      margin-top: 2px;
+      color: var(--blue);
+    }
 
-      <li>
-        <b>Bachelor of Engineering </b> (Computer Science)
-        (2015 - 2019) 
-        <br/> School of Computer Science and Technology, Xidian University, Xi’an, Shaanxi, China.  <br/>
-      </li>
-  </ul>
- -->
+    .divider {
+      border: none;
+      border-top: 1px solid var(--gray-200);
+      margin: 1.25rem 0;
+    }
 
+    .sidebar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
 
+    .sidebar-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border: 1px solid var(--blue);
+      border-radius: 20px;
+      color: var(--blue);
+      transition: background .15s, color .15s;
+    }
 
-  <div><h3>WORK EXPERIENCES</h3></div>
-    <ul>
-      <li>
-        <b>Research Assistant</b> NUS, Singapore.
-        (2015.08 - 2021.10) 
-        <br/>
-      </li>
+    .sidebar-links a:hover {
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+    }
 
-      <li>
-        <b>Visiting Scholar</b> The University of Queensland, Australia.
-        (2019.08 - 2019.11) 
-        <br/>
-      </li>
+    /* ── Main Content ────────────────────────────── */
+    .main {
+      flex: 1;
+      min-width: 0;
+      padding: 2.5rem 0 4rem 2rem;
+      border-left: 1px solid var(--gray-200);
+    }
 
-      <li>
-        <b>Visiting Scholar</b> NUS (Suzhou) Research Institute, China.
-        (2021.06 - 2021.08) 
-        <br/>
-      </li>
+    /* ── Section ─────────────────────────────────── */
+    section {
+      margin-bottom: 3rem;
+    }
 
-      <li>
-        <b>Postdoctoral Researcher</b> NUS, Singapore.
-        (2021.10 - 2023.02) 
-        <br/>
-      </li>
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-      <li>
-        <b>Associate Professor</b> HUST, China.
-        (2023.03 -) 
-        <br/>
-      </li>
+    /* ── Bio ─────────────────────────────────────── */
+    .bio p {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
+    }
 
-    </ul>
+    /* ── Research Interests ──────────────────────── */
+    .interest-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-    <!-- <style>
-      * {
-        box-sizing: border-box;
-      }
-      
-      .row {
+    .interest-tag {
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      background: var(--blue-lt);
+      color: var(--navy);
+      border-radius: 20px;
+      border: 1px solid #bfdbfe;
+    }
+
+    /* ── News ────────────────────────────────────── */
+    .news-list {
+      list-style: none;
+      max-height: 260px;
+      overflow-y: auto;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.5rem 0;
+    }
+
+    .news-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 0.55rem 1rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .news-list li:last-child { border-bottom: none; }
+
+    .news-date {
+      flex-shrink: 0;
+      width: 100px;
+      font-weight: 600;
+      color: var(--blue);
+      font-size: 0.78rem;
+      padding-top: 1px;
+    }
+
+    .news-text { color: var(--gray-700); }
+
+    /* ── Publications ────────────────────────────── */
+    .pub-year-group {
+      margin-bottom: 2rem;
+    }
+
+    .pub-year-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-entry {
+      display: flex;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      transition: box-shadow .15s, border-color .15s;
+    }
+
+    .pub-entry:hover {
+      border-color: #93c5fd;
+      box-shadow: 0 2px 8px rgba(37,99,235,.08);
+    }
+
+    .pub-num {
+      flex-shrink: 0;
+      width: 24px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      padding-top: 2px;
+    }
+
+    .pub-body { flex: 1; min-width: 0; }
+
+    .pub-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gray-900);
+      line-height: 1.4;
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-authors {
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-authors strong {
+      color: var(--gray-700);
+      font-weight: 600;
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .venue-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--navy);
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    .venue-badge.ccfa { background: #b91c1c; }
+    .venue-badge.ccfb { background: #b45309; }
+    .venue-badge.tier { background: var(--navy); }
+
+    .pub-links { display: flex; gap: 0.4rem; }
+
+    .pub-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border: 1px solid var(--gray-300, #d1d5db);
+      border-radius: 4px;
+      color: var(--gray-700);
+      transition: background .12s;
+    }
+
+    .pub-link:hover {
+      background: var(--gray-100);
+      text-decoration: none;
+      color: var(--gray-900);
+    }
+
+    /* ── Timeline (Edu / Exp) ────────────────────── */
+    .timeline { list-style: none; }
+
+    .timeline li {
+      display: flex;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 83px;
+      top: 22px;
+      bottom: 0;
+      width: 1px;
+      background: var(--gray-200);
+    }
+
+    .timeline li:last-child::before { display: none; }
+
+    .tl-date {
+      flex-shrink: 0;
+      width: 80px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--blue);
+      padding-top: 2px;
+      text-align: right;
+    }
+
+    .tl-dot {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px var(--blue);
+      margin-top: 5px;
+    }
+
+    .tl-body { flex: 1; min-width: 0; }
+
+    .tl-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gray-900);
+      margin-bottom: 0.1rem;
+    }
+
+    .tl-sub {
+      font-size: 0.83rem;
+      color: var(--gray-500);
+    }
+
+    /* ── Service ─────────────────────────────────── */
+    .service-list { list-style: none; }
+
+    .service-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+
+    .service-list li:last-child { border-bottom: none; }
+
+    .service-role {
+      flex-shrink: 0;
+      width: 150px;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      border-top: 1px solid var(--gray-200);
+      margin-top: 2rem;
+    }
+
+    /* ── Publication Table (daoyuan style) ──────── */
+    .pub-table { width: 100%; border-collapse: collapse; }
+    .pub-table tr { border-bottom: 1px solid var(--gray-100); }
+    .pub-table tr:hover { background: var(--gray-50); }
+    .pub-table td { padding: 0.85rem 0.5rem; vertical-align: top; }
+    .pub-id-cell { width: 44px; text-align: center; padding-top: 1rem !important; }
+    .pub-num-badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      padding: 3px 7px; border-radius: 10px;
+      background: var(--blue); color: #fff; white-space: nowrap;
+    }
+    .pub-row-title { font-size: 0.9rem; font-weight: 700; color: var(--gray-900); line-height: 1.4; margin-bottom: 0.3rem; }
+    .pub-venue-inline {
+      display: inline-block; font-size: 0.75rem; font-weight: 600;
+      padding: 2px 7px; border-radius: 3px;
+      background: var(--gray-200); color: var(--gray-700);
+      margin-left: 8px; vertical-align: middle;
+    }
+    .pub-row-authors { font-size: 0.83rem; color: var(--gray-500); margin-bottom: 0.2rem; line-height: 1.5; }
+    .pub-row-authors u { text-underline-offset: 2px; color: var(--gray-900); font-weight: 600; }
+    .pub-row-detail { font-size: 0.79rem; color: var(--gray-500); font-style: italic; margin-bottom: 0.5rem; }
+    .pub-row-btns { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    /* Action buttons */
+    .pbtn {
+      display: inline-block; font-size: 0.72rem; font-weight: 500;
+      padding: 3px 9px; border-radius: 3px;
+      color: #fff !important; text-decoration: none !important;
+      white-space: nowrap; line-height: 1.5;
+    }
+    .pbtn-green  { background: #5cb85c; } .pbtn-green:hover  { background: #449d44; }
+    .pbtn-blue   { background: #337ab7; } .pbtn-blue:hover   { background: #286090; }
+    .pbtn-teal   { background: #5bc0de; cursor: default; }
+    .pbtn-orange { background: #f0ad4e; } .pbtn-orange:hover { background: #ec971f; }
+    .pbtn-red    { background: #d9534f; } .pbtn-red:hover    { background: #c9302c; }
+    /* Google Scholar button */
+    .gs-btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.83rem; font-weight: 600; padding: 7px 14px;
+      background: #4285f4; color: #fff !important; border-radius: 6px;
+      text-decoration: none !important; transition: background 0.15s;
+      margin-top: 0.25rem;
+    }
+    .gs-btn:hover { background: #2b6cd4; }
+    .gs-icon { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+
+      .page { flex-direction: column; padding: 0 1rem; }
+
+      .sidebar {
+        width: 100%;
+        min-width: unset;
+        padding: 1.5rem 0 0;
         display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        align-items: flex-start;
       }
-      
-      /* Create three equal columns that sits next to each other */
-      .column {
-        flex: 33.33%;
-        padding: 5px;
+
+      .sidebar-inner {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        width: 100%;
+        align-items: flex-start;
       }
-      </style>
-    <div class="row">
-      <div class="column">
-        <img src="/assets/images/Xidian_logo.png" alt="Xidian University" height="60px" style="float: left">
+
+      .profile-photo { width: 120px; }
+
+      .main {
+        padding: 1.5rem 0 3rem;
+        border-left: none;
+        border-top: 1px solid var(--gray-200);
+      }
+
+      .timeline li::before { display: none; }
+
+      .tl-date { width: 60px; font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ───────────────────────────────── -->
+<nav>
+  <span class="brand">Wang Kailong</span>
+  <ul>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#about">About</a></li>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#news">News</a></li>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#publications">Publications</a></li>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#education">Education</a></li>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#experience">Experience</a></li>
+    <li><a href="file:///Users/wangkailong/Projects/academic-website/index.html#service">Service</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── Sidebar ──────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <img class="profile-photo" src="./avatar.jpg" alt="Wang Kailong">
+
+      <h1>Wang Kailong</h1>
+      <p class="cjk">王凯龙</p>
+
+      <div class="position">
+        <strong>Associate Professor</strong>
+        School of Computer Science and Engineering<br>
+        Huazhong University of Science and Technology (HUST)
       </div>
 
-      <div class="column">
-        <img src="/assets/images/SoC_logo.png" alt="NUS"  height="60px" style="float: left">
+      <hr class="divider">
+
+      <ul class="contact-list">
+        <li>
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+          <span>wangkl AT hust.edu.cn</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"></path></svg>
+          <span>Room C206, MingDe Building, HUST</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+          <span>Wuhan, China</span>
+        </li>
+      </ul>
+
+      <hr class="divider">
+
+      <a class="gs-btn" href="https://scholar.google.com/citations?user=wangklsg" target="_blank" rel="noopener">
+        <!-- Graduation cap icon -->
+        <svg class="gs-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path>
+        </svg>
+        Google Scholar
+      </a>
+
+    </div>
+  </aside>
+
+  <!-- ── Main Content ──────────────────────────────── -->
+  <main class="main">
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="bio">
+        <p>
+          I am an Associate Professor in the School of Computer Science and Engineering at
+          <a href="https://www.hust.edu.cn/" target="_blank" rel="noopener">Huazhong University of Science and Technology (HUST)</a>.
+          My research lies at the intersection of <strong>Trustworthy AI</strong> and
+          <strong>Secure &amp; Private Software Engineering</strong>.
+        </p>
+        <p>
+          Specifically, I focus on the safety and ethics assessment, interpretability, and
+          explainability of large language models (LLMs), as well as program analysis and
+          vulnerability detection for modern software systems. I aim to build AI systems and
+          software that are robust, transparent, and trustworthy.
+        </p>
+        <p>
+          I received my Ph.D. from the
+          <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">School of Computing, National University of Singapore (NUS)</a>
+          and my Bachelor's degree (First Class Honours) from
+          <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University (NTU)</a>.
+          Prior to joining HUST, I was a Research Fellow/Postdoctoral Researcher at NUS (2021–2023).
+        </p>
+        <p><strong>I am looking for motivated PhD/Master students and research interns.</strong>
+        Please feel free to reach out if you are interested in working with me.</p>
       </div>
 
-      <div class="column">
-        <img src="/assets/images/jd_logo.png" alt="JD.com" height="40px" style="float: left">
+      <br>
+      <h3 style="font-size:.9rem;font-weight:600;color:var(--gray-700);margin-bottom:.6rem;">Research Interests</h3>
+      <div class="interest-grid">
+        <span class="interest-tag">Trustworthy AI / LLM Safety</span>
+        <span class="interest-tag">LLM Interpretability &amp; Explainability</span>
+        <span class="interest-tag">Program Analysis</span>
       </div>
-    </div> 
-     -->
+    </section>
 
-    <!-- <img src="/assets/images/ms_logo.png" height="65" alt=" /"> -->
+    <!-- News -->
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Mar 2026</span>
+          <span class="news-text">Paper <em>A Large-Scale Privacy Assessment of Android Third-Party SDKs</em> accepted by <strong>TSE</strong>. Congratulations to Mark!</span>
+        </li>
+        <li>
+          <span class="news-date">Feb 2026</span>
+          <span class="news-text">Paper <em>Efficient and Effective Universal Adversarial Attack against Vision-Language Pre-training Models</em> accepted by <strong>ICASSP 2026</strong> (oral). Congratulations to Fan Yang!</span>
+        </li>
+        <li>
+          <span class="news-date">Feb 2026</span>
+          <span class="news-text">Joined the Program Committee of <strong>ICSE 2027</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Dec 2025</span>
+          <span class="news-text">Two papers accepted by <strong>ICSE 2026</strong>. Congratulations to Xinyi!</span>
+        </li>
+        <li>
+          <span class="news-date">Nov 2025</span>
+          <span class="news-text">Two papers accepted by <strong>AAAI 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Sep 2025</span>
+          <span class="news-text">Survey paper <em>Large language models for cyber security</em> accepted by <strong>TOSEM</strong>. Congratulations to Hanxiang!</span>
+        </li>
+        <li>
+          <span class="news-date">Jul 2025</span>
+          <span class="news-text">Paper <em>SPOLRE</em> accepted by <strong>TOSEM</strong>. Congratulations to Guanyu and Yi!</span>
+        </li>
+        <li>
+          <span class="news-date">Jun 2025</span>
+          <span class="news-text">Joined the Program Committee of <strong>FSE 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Mar 2025</span>
+          <span class="news-text">Paper <em>NeuSemSlice</em> accepted by <strong>TOSEM</strong>. Congratulations to Shide!</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2025</span>
+          <span class="news-text">Two papers accepted by <strong>ICSE 2025</strong>. Congratulations to Shide and Yuqing!</span>
+        </li>
+        <li>
+          <span class="news-date">Dec 2024</span>
+          <span class="news-text">Serving as the Publication Chair for <strong>IWQoS 2025</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Dec 2024</span>
+          <span class="news-text">Paper <em>MiniScope</em> accepted by <strong>TOSEM</strong>. Congratulations to Shenao!</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2024</span>
+          <span class="news-text">Survey paper <em>Large Language Models for Software Engineering</em> accepted by <strong>TOSEM</strong>. Congratulations to Xinyi!</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2024</span>
+          <span class="news-text">Two papers (full) accepted by <strong>ASE 2024</strong> Industry Showcase Track. Congratulations to Xinyi, Jian and Shenao!</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2024</span>
+          <span class="news-text">Serving as a PC member for <strong>WWW 2025</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2024</span>
+          <span class="news-text">Two papers accepted by <strong>ASE 2024</strong>. Congratulations to Baijun, Zhibo and Yuxi!</span>
+        </li>
+        <li>
+          <span class="news-date">Jun 2024</span>
+          <span class="news-text">Paper <em>Drowzee</em> accepted by <strong>OOPSLA 2024</strong>. Congratulations to Ningke!</span>
+        </li>
+        <li>
+          <span class="news-date">Feb 2024</span>
+          <span class="news-text">Paper <em>MeTMaP</em> accepted by <strong>FORGE 2024</strong>. Congratulations to Guanyu and Yi!</span>
+        </li>
+        <li>
+          <span class="news-date">Feb 2024</span>
+          <span class="news-text">Two papers accepted by <strong>WWW 2024</strong>. Congratulations to Liuhuo!</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2024</span>
+          <span class="news-text">Paper <em>Glitch Tokens in Large Language Models</em> accepted by <strong>FSE 2024</strong>. Congratulations to Yuxi and Yi!</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2024</span>
+          <span class="news-text">Paper <em>Beyond Fidelity</em> accepted by <strong>TOSEM</strong>. Congratulations to Baijun!</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2024</span>
+          <span class="news-text">Serving as PC member for WWW, LCTES, FORGE, Internetware, ICECCS 2024.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+      <p style="font-size:.83rem;color:var(--gray-500);margin-bottom:1.25rem;">
+        <sup>#</sup> corresponding author
+      </p>
+
+      <!-- 2026 -->
+      <div class="pub-year-group">
+        <div class="pub-year-label">2026</div>
+        <table class="pub-table"><tbody>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P28</span></td>
+            <td>
+              <div class="pub-row-title"><b>A Large-Scale Privacy Assessment of Android Third-Party SDKs</b> <span class="pub-venue-inline">TSE '26</span></div>
+              <div class="pub-row-authors">Mark Huasong Meng, Chuan Yan, Yun Hao, Qing Zhang, Zeyu Wang, <u>Kailong Wang</u>, Sin Gee Teo, Guangdong Bai, Jin Song Dong</div>
+              <div class="pub-row-detail">IEEE Transactions on Software Engineering (TSE), 2026.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/html/2409.10411v1" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P27</span></td>
+            <td>
+              <div class="pub-row-title"><b>Efficient and Effective Universal Adversarial Attack against Vision-Language Pre-training Models</b> <span class="pub-venue-inline">ICASSP '26</span></div>
+              <div class="pub-row-authors">Fan Yang, Yihao Huang, Ling Shi, Geguang Pu, <u>Kailong Wang</u><sup>#</sup></div>
+              <div class="pub-row-detail">In Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026. <strong>(Oral)</strong></div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.11639" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P26</span></td>
+            <td>
+              <div class="pub-row-title"><b>Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving</b> <span class="pub-venue-inline">ICSE '26</span></div>
+              <div class="pub-row-authors">Xinyi Zheng, Ningke Li, Xiaokun Luan, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Meng Sun, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2026.</div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2512.23511" target="_blank" rel="noopener">Paper</a></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P25</span></td>
+            <td>
+              <div class="pub-row-title"><b>ADARULE: LLM-Driven Natural Language to LTL Conversion via Pattern-Adaptive Rule Induction</b> <span class="pub-venue-inline">ICSE '26</span></div>
+              <div class="pub-row-authors">Jiayi Hu, Jingling Sun, Chong Wang, Yihao Huang, Jincao Feng, Yilongfei Xu, Yong Li, <u>Kailong Wang</u>, Weikai Miao, Jin Song Dong, Geguang Pu</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2026.</div>
+              <div class="pub-row-btns"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P24</span></td>
+            <td>
+              <div class="pub-row-title"><b>STEAMROLLER: A Multi-Agent System for Inclusive Automatic Speech Recognition for People who Stutter</b> <span class="pub-venue-inline">AAAI '26</span></div>
+              <div class="pub-row-authors">Ziqi Xu, Yi Liu, Yuekang Li, Ling Shi, <u>Kailong Wang</u>, Yongxin Zhao</div>
+              <div class="pub-row-detail">In Proc. AAAI Conference on Artificial Intelligence (AAAI), 2026.</div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2601.10223" target="_blank" rel="noopener">Paper</a></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P23</span></td>
+            <td>
+              <div class="pub-row-title"><b>On the Feasibility of Using MultiModal LLMs to Execute AR Social Engineering Attacks</b> <span class="pub-venue-inline">AAAI '26</span></div>
+              <div class="pub-row-authors">Ting Bi, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, <u>Kailong Wang</u>, Liting Zhou, Yang Yang, Tianlong Yu</div>
+              <div class="pub-row-detail">In Proc. AAAI Conference on Artificial Intelligence (AAAI), 2026.</div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2504.13209" target="_blank" rel="noopener">Paper</a></div>
+            </td>
+          </tr>
+
+        </tbody></table>
+      </div>
+
+      <!-- 2025 -->
+      <div class="pub-year-group">
+        <div class="pub-year-label">2025</div>
+        <table class="pub-table"><tbody>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P22</span></td>
+            <td>
+              <div class="pub-row-title"><b>Large Language Models for Cyber Security: A Systematic Literature Review</b> <span class="pub-venue-inline">TOSEM '25</span></div>
+              <div class="pub-row-authors">Hanxiang Xu, Shenao Wang, Ningke Li, <u>Kailong Wang</u><sup>#</sup>, Yanjie Zhao, Kai Chen, Ting Yu, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2405.04760" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P21</span></td>
+            <td>
+              <div class="pub-row-title"><b>SEAR: A Multimodal Dataset for Analyzing AR-LLM-Driven Social Engineering Behaviors</b> <span class="pub-venue-inline">ACM MM '25</span></div>
+              <div class="pub-row-authors">Tianlong Yu, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, <u>Kailong Wang</u>, Liting Zhou, Yang Yang, Ting Bi</div>
+              <div class="pub-row-detail">In Proc. ACM International Conference on Multimedia (ACM MM), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2505.24458" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P20</span></td>
+            <td>
+              <div class="pub-row-title"><b>SPOLRE: Semantic Preserving Object Layout Reconstruction for Image Captioning System Testing</b> <span class="pub-venue-inline">TOSEM '25</span></div>
+              <div class="pub-row-authors">Yi Liu, Guanyu Wang, Xinyi Zheng, Gelei Deng, <u>Kailong Wang</u><sup>#</sup>, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.18512" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P19</span></td>
+            <td>
+              <div class="pub-row-title"><b>Position: Trustworthy AI Agents Require the Integration of Large Language Models and Formal Methods</b> <span class="pub-venue-inline">ICML '25</span></div>
+              <div class="pub-row-authors">Yedi Zhang, Yufan Cai, Xinyue Zuo, Xiaokun Luan, <u>Kailong Wang</u>, Zhe Hou, Yifan Zhang, Zhiyuan Wei, Meng Sun, Jun Sun, Jing Sun, Jin Song Dong</div>
+              <div class="pub-row-detail">In Proc. International Conference on Machine Learning (ICML), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2412.06512" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P18</span></td>
+            <td>
+              <div class="pub-row-title"><b>NeuSemSlice: Towards Effective DNN Model Maintenance via Neuron-level Semantic Slicing</b> <span class="pub-venue-inline">TOSEM '25</span></div>
+              <div class="pub-row-authors">Shide Zhou, Tianlin Li, <u>Kailong Wang</u><sup>#</sup>, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.20281" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P17</span></td>
+            <td>
+              <div class="pub-row-title"><b>Understanding the Effectiveness of Coverage Criteria for Large Language Models: A Special Angle from Jailbreak Attacks</b> <span class="pub-venue-inline">ICSE '25</span></div>
+              <div class="pub-row-authors">Shide Zhou, Tianlin Li, <u>Kailong Wang</u><sup>#</sup>, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.15207" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P16</span></td>
+            <td>
+              <div class="pub-row-title"><b>Decoding Secret Memorization in Code LLMs Through Token-Level Characterization</b> <span class="pub-venue-inline">ICSE '25</span></div>
+              <div class="pub-row-authors">Yuqing Nie, Chong Wang, <u>Kailong Wang</u><sup>#</sup>, Guoai Xu, Guosheng Xu, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2025.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.08858" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+        </tbody></table>
+      </div>
+
+      <!-- 2024 -->
+      <div class="pub-year-group">
+        <div class="pub-year-label">2024</div>
+        <table class="pub-table"><tbody>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P15</span></td>
+            <td>
+              <div class="pub-row-title"><b>MiniScope: Automated UI Exploration and Privacy Inconsistency Detection of MiniApps via Two-phase Iterative Hybrid Analysis</b> <span class="pub-venue-inline">TOSEM '24</span></div>
+              <div class="pub-row-authors">Shenao Wang, Yuekang Li, <u>Kailong Wang</u><sup>#</sup>, Yi Liu, Hui Li, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2401.03218" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P14</span></td>
+            <td>
+              <div class="pub-row-title"><b>Large Language Models for Software Engineering: A Systematic Literature Review</b> <span class="pub-venue-inline">TOSEM '24</span></div>
+              <div class="pub-row-authors">Xinyi Hou, Yanjie Zhao, Yue Liu, Zhou Yang, <u>Kailong Wang</u>, Li Li, Xiapu Luo, David Lo, John Grundy, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2308.10620" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P13</span></td>
+            <td>
+              <div class="pub-row-title"><b>GlitchProber: Advancing Effective Detection and Mitigation of Glitch Tokens in Large Language Models</b> <span class="pub-venue-inline">ASE '24</span></div>
+              <div class="pub-row-authors">Zhibo Zhang, Wuxia Bai, Yuxi Li, Mark Huasong Meng, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Li Li, Jun Wang, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04905" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P12</span></td>
+            <td>
+              <div class="pub-row-title"><b>Semantic-Enhanced Indirect Call Analysis with Large Language Models</b> <span class="pub-venue-inline">ASE '24</span></div>
+              <div class="pub-row-authors">Baijun Cheng, Cen Zhang, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Yang Liu, Haoyu Wang, Yao Guo, Xiangqun Chen</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04344" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P11</span></td>
+            <td>
+              <div class="pub-row-title"><b>Towards Robust Detection of Open Source Software Supply Chain Poisoning Attacks in Industry Environments</b> <span class="pub-venue-inline">ASE '24</span></div>
+              <div class="pub-row-authors">Xinyi Zheng, Chen Wei, Shenao Wang, Yanjie Zhao, Peiming Gao, Yuanchao Zhang, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase (ASE), 2024.</div>
+              <div class="pub-row-btns"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P10</span></td>
+            <td>
+              <div class="pub-row-title"><b>Models Are Codes: Towards Measuring Malicious Code Poisoning Attacks on Pre-trained Model Hubs</b> <span class="pub-venue-inline">ASE '24</span></div>
+              <div class="pub-row-authors">Jian Zhao, Shenao Wang, Yanjie Zhao, Xinyi Hou, <u>Kailong Wang</u>, Peiming Gao, Yuanchao Zhang, Chen Wei, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase (ASE), 2024.</div>
+              <div class="pub-row-btns"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P9</span></td>
+            <td>
+              <div class="pub-row-title"><b>Drowzee: Metamorphic Testing for Fact-conflicting Hallucination Detection in Large Language Models</b> <span class="pub-venue-inline">OOPSLA '24</span></div>
+              <div class="pub-row-authors">Ningke Li, Yuekang Li, Yi Liu, Ling Shi, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages &amp; Applications (OOPSLA), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2405.00648" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P8</span></td>
+            <td>
+              <div class="pub-row-title"><b>Glitch Tokens in Large Language Models: Categorization Taxonomy and Effective Detection</b> <span class="pub-venue-inline">FSE '24</span></div>
+              <div class="pub-row-authors">Yuxi Li, Yi Liu, Gelei Deng, Ying Zhang, Wenjia Song, Ling Shi, <u>Kailong Wang</u><sup>#</sup>, Yuekang Li, Yang Liu, Haoyu Wang</div>
+              <div class="pub-row-detail">In Proc. ACM International Conference on the Foundations of Software Engineering (FSE), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2404.09894" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P7</span></td>
+            <td>
+              <div class="pub-row-title"><b>MetMap: Metamorphic Testing for Detecting False Vector Matching Problems in LLM Augmented Generation</b> <span class="pub-venue-inline">FORGE '24</span></div>
+              <div class="pub-row-authors">Guanyu Wang, Yuekang Li, Yi Liu, Gelei Deng, Tianlin Li, Guosheng Xu, Yang Liu, Haoyu Wang, <u>Kailong Wang</u><sup>#</sup></div>
+              <div class="pub-row-detail">In Proc. AI Foundation Models and Software Engineering (FORGE), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2402.14480" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P6</span></td>
+            <td>
+              <div class="pub-row-title"><b>Beyond Fidelity: Explaining Vulnerability Localization of Learning-based Detectors</b> <span class="pub-venue-inline">TOSEM '24</span></div>
+              <div class="pub-row-authors">Baijun Cheng, Shengming Zhao, <u>Kailong Wang</u><sup>#</sup>, Meizhen Wang, Guangdong Bai, Ruitao Feng, Yao Guo, Lei Ma, Haoyu Wang</div>
+              <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 33(5):1–33, 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3641543" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P5</span></td>
+            <td>
+              <div class="pub-row-title"><b>Don't Bite Off More Than You Can Chew: Investigating Excessive Permission Requests in Trigger-action Integrations</b> <span class="pub-venue-inline">WWW '24</span></div>
+              <div class="pub-row-authors">Liuhuo Wan, <u>Kailong Wang</u><sup>#</sup>, Kulani Tharaka Mahadewa, Haoyu Wang, Guangdong Bai</div>
+              <div class="pub-row-detail">In Proc. ACM Web Conference (WWW), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645721" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P4</span></td>
+            <td>
+              <div class="pub-row-title"><b>Is It Safe To Share Your Files? An Empirical Security Analysis of Google Workspace</b> <span class="pub-venue-inline">WWW '24</span></div>
+              <div class="pub-row-authors">Liuhuo Wan, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang, Guangdong Bai</div>
+              <div class="pub-row-detail">In Proc. ACM Web Conference (WWW), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645697" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P3</span></td>
+            <td>
+              <div class="pub-row-title"><b>Masterkey: Automated Jailbreak of Multiple Large Language Model Chatbots</b> <span class="pub-venue-inline">NDSS '24</span></div>
+              <div class="pub-row-authors">Gelei Deng, Yi Liu, Yuekang Li, <u>Kailong Wang</u>, Ying Zhang, Zefeng Li, Haoyu Wang, Tianwei Zhang, Yang Liu</div>
+              <div class="pub-row-detail">In Proc. Network and Distributed System Security Symposium (NDSS), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf" target="_blank" rel="noopener">Paper</a>              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P2</span></td>
+            <td>
+              <div class="pub-row-title"><b>Pandora: Jailbreak GPTs by Retrieval Augmented Generation Poisoning</b> <span class="pub-venue-inline">NDSS-AISCC '24</span></div>
+              <div class="pub-row-authors">Gelei Deng, Yi Liu, <u>Kailong Wang</u>, Yuekang Li, Tianwei Zhang, Yang Liu</div>
+              <div class="pub-row-detail">In Proc. NDSS Workshop on AI System with Confidential Computing (AISCC), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://www.ndss-symposium.org/wp-content/uploads/aiscc2024-18-paper.pdf" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pub-id-cell"><span class="pub-num-badge">P1</span></td>
+            <td>
+              <div class="pub-row-title"><b>Essential or Excessive? MindaExt: Measuring Data Minimization Practices among Browser Extensions</b> <span class="pub-venue-inline">SANER '24</span></div>
+              <div class="pub-row-authors">Yuxi Ling, Yun Hao, Yuyan Wang, <u>Kailong Wang</u>, Guangdong Bai, Jin Song Dong</div>
+              <div class="pub-row-detail">In Proc. IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), 2024.</div>
+              <div class="pub-row-btns">
+                <a class="pbtn pbtn-blue" href="https://yuxiling.github.io/files/2024010163.pdf" target="_blank" rel="noopener">PDF</a>              </div>
+            </td>
+          </tr>
+
+        </tbody></table>
+      </div>
+
+      <p style="font-size:.83rem;color:var(--gray-500);">
+        For a complete list, see
+        <a href="https://scholar.google.com/citations?user=WpOnslgAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        or <a href="https://dblp.org/pid/171/1258.html" target="_blank" rel="noopener">DBLP</a>.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <ul class="timeline">
+        <li>
+          <div class="tl-date">2016–2022</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">Ph.D. in Computer Science</div>
+            <div class="tl-sub">School of Computing, National University of Singapore (NUS)</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-date">2011–2015</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">B.Eng. in Infocommunication Engineering, First Class Honours (GPA 4.76/5.00)</div>
+            <div class="tl-sub">School of Electrical and Electronic Engineering, Nanyang Technological University (NTU), Singapore</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <ul class="timeline">
+        <li>
+          <div class="tl-date">2023–now</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">Associate Professor</div>
+            <div class="tl-sub">School of CSE, Huazhong University of Science and Technology (HUST)</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-date">2022–2023</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">Postdoctoral Research Fellow</div>
+            <div class="tl-sub">School of Computing, National University of Singapore (NUS) · Supervised by Prof. Jin Song Dong</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-date">2019</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">Visiting Scholar</div>
+            <div class="tl-sub">University of Queensland, Australia</div>
+          </div>
+        </li>
+        <li>
+          <div class="tl-date">2015–2021</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-title">Research Assistant</div>
+            <div class="tl-sub">School of Computing, National University of Singapore (NUS) · Supervised by Prof. Jin Song Dong</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+      <h2 class="section-title">Academic Service</h2>
+
+      <h3 style="font-size:.85rem;font-weight:700;color:var(--gray-700);margin-bottom:.5rem;">Journal Editorship / Reviewer</h3>
+      <ul class="service-list" style="margin-bottom:1.25rem;">
+        <li>IEEE Transactions on Software Engineering (TSE)</li>
+        <li>ACM Transactions on Software Engineering and Methodology (TOSEM)</li>
+        <li>IEEE Transactions on Dependable and Secure Computing (TDSC)</li>
+        <li>Nature Communications (NC)</li>
+        <li>IEEE Transactions on Information Forensics and Security (TIFS)</li>
+      </ul>
+
+      <h3 style="font-size:.85rem;font-weight:700;color:var(--gray-700);margin-bottom:.5rem;">Program Committee Member</h3>
+      <ul class="service-list">
+        <li>ACM FSE 2026</li>
+        <li>AAAI 2026</li>
+        <li>ACM Web Conference (WWW 2023–2026)</li>
+        <li>ACM International Conference on Multimedia (MM 2025)</li>
+        <li>IEEE/ACM IWQoS 2025 <span style="color:var(--gray-500);font-size:.8rem;">(Publication Chair)</span></li>
+        <li>FORGE 2024–2025</li>
+        <li>Internetware 2024–2025</li>
+        <li>ICECCS 2024</li>
+        <li>ICFEM 2023</li>
+        <li>IEEE PRDC 2023</li>
+        <li>ChinaSoft 2023</li>
+      </ul>
+    </section>
 
 
-    <!-- <div><h3>LINKS</h3></div> -->
-    <!-- <b><a href="{{ site.baseurl }}/assets/CV202204-ChangshengSun.pdf">Curriculum Vitae</a>.</b> (PDF, Updated 2022-04-01)<br/><br/> -->
+  </main>
+</div>
+
+<footer>
+  © <span id="yr">2026</span> Wang Kailong — Huazhong University of Science and Technology
+</footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
 
 
 
-  <div><h3>CONTACT</h3></div>
-    <p>
-    
-    <b>Wang Kailong</b> (王凯龙)<br/>
-    <b>Office: </b>Room C206, MingDe Building<br/>
-    <b>Email: </b>wangkl AT hust.edu.cn<br/>
-    <br/>
-    </p>
-    
-    <!-- <p>Fun fact: my name in Chinese character is "荔", which means <a href="https://en.wikipedia.org/wiki/Lychee" target="_blank">lychee</a>, a type of fruit popular in southeastern China.</p> -->
-    
-	<!-- <p style="color: #aaaaaa; font-size: 85%;">I snack a lot while writing my blogs. Well, it is actually more like, no snack no will power. If you enjoy my posts, I wouldn't mind for 1-3 dollars donation to my <a href="https://venmo.com/lilianweng" target="_blank">venmo</a> or <a href="https://paypal.me/LilianWeng" target="_blank">paypal</a>, so I can buy more <a href="https://www.instagram.com/p/CAd9qnMD4Ps/" target="_blank">chips</a> :P</p> -->
-
-
-  <!-- <div class="site-links"> -->
-    <!-- <p> -->
-        <!-- <a href="{{ site.baseurl }}/assets/CV202204-ChangshengSun.pdf" target="_blank">
-            <img src="{{ '/assets/images/logo_CV.png' | relative_url }}" alt="CV" />
-        </a> -->
-        <!-- <a href="https://scholar.google.com/citations?user=1M5_gpIAAAAJ" target="_blank">
-            <img src="{{ '/assets/images/logo_scholar.png' | relative_url }}" alt="Google Scholar"/>
-        </a>
-        <a href="https://www.linkedin.com/in/changshengsun/" target="_blank">
-          <img src="{{ '/assets/images/logo_linkedin.png' | relative_url }}" alt="LinkedIn"/>
-        </a>
-        <a href="https://github.com/cs-sun" target="_blank">
-            <img src="{{ '/assets/images/logo_github.png' | relative_url }}" alt="GitHub"/>
-        </a>
-        <a href="https://www.instagram.com/changsheng_sun/" target="_blank">
-            <img src="{{ '/assets/images/logo_instagram.png' | relative_url }}" alt="Instagram"/>
-        </a>
-        <a href="https://twitter.com/changsheng_sun/" target="_blank">
-            <img src="{{ '/assets/images/logo_twitter.png' | relative_url }}" alt="Twitter"/>
-        </a> -->
-    <!-- </p>
-  </div>
-
-    <p style="color: #aaaaaa; font-size: 85%;"> Last Updated on 2023-04-06</p>
-    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=8a8a8a&w=300&t=tt&d=h-U9FZqTwQPIel_60q9-Po0q9dYG9EvBqNQK0x5Gi7A&co=ffffff&ct=7d7d7d&cmo=697387&cmn=40609e'></script>
-  
-</div> -->
-
-
+</body></html>
