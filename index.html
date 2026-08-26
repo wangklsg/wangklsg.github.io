@@ -287,6 +287,29 @@
 
     .news-text { color: var(--gray-700); }
 
+    .news-list li.pinned {
+      background: var(--gray-50, #f8fafc);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .pin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--blue);
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+
+    .pin-badge svg {
+      width: 12px;
+      height: 12px;
+    }
+
     /* ── Publications ────────────────────────────── */
     .pub-year-group {
       margin-bottom: 2rem;
@@ -586,7 +609,12 @@
       <p class="cjk">王凯龙</p>
 
       <div class="position">
-        <strong>Associate Professor</strong>
+        <strong>Assistant Professor on Research-Track</strong>
+        ECE, National University of Singapore (NUS)
+      </div>
+
+      <div class="position">
+        <strong>Associate Professor (Adjunct)</strong>
         School of CSE<br>
         Huazhong University of Science and Technology (HUST)
       </div>
@@ -641,7 +669,9 @@
       <h2 class="section-title">About</h2>
       <div class="bio">
         <p>
-          I am an Associate Professor in the School of Computer Science and Engineering at
+          I am an Assistant Professor on Research-Track in the Department of Electrical and Computer Engineering (ECE) at
+          <a href="https://www.nus.edu.sg/" target="_blank" rel="noopener">National University of Singapore (NUS)</a>,
+          and an Associate Professor (Adjunct) in the School of Computer Science and Engineering at
           <a href="https://www.hust.edu.cn/" target="_blank" rel="noopener">Huazhong University of Science and Technology (HUST)</a>.
           My research lies at the intersection of <strong>Trustworthy AI</strong> and
           <strong>Secure &amp; Private Software Engineering</strong>.
@@ -676,9 +706,21 @@
     <section id="news">
       <h2 class="section-title">News</h2>
       <ul class="news-list">
-        <li>
+        <li class="pinned">
           <span class="news-date">May 2026</span>
-          <span class="news-text">Our <strong>SSRC-thematic grant (2026&ndash;2030)</strong> <em>&ldquo;debiaSING: Finding and Fixing Biases in the Human-AI Complex&rdquo;</em> has been awarded. We are looking for <strong>RAs and RFs</strong> hosted at the <strong>National University of Singapore</strong>. Please send your CV if you are interested!</span>
+          <span class="news-text"><span class="pin-badge"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z"/></svg>Pinned</span>Our <strong>SSRC-thematic grant (2026&ndash;2030)</strong> <em>&ldquo;debiaSING: Finding and Fixing Biases in the Human-AI Complex&rdquo;</em> has been awarded. We are looking for <strong>RAs and RFs</strong> hosted at the <strong>National University of Singapore</strong>. Please send your CV if you are interested!</span>
+        </li>
+        <li>
+          <span class="news-date">Sep 2026</span>
+          <span class="news-text">Join the Department of Electrical and Computer Engineering (ECE) at the <strong>National University of Singapore (NUS)</strong> as an <strong>Assistant Professor on Research-Track</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2026</span>
+          <span class="news-text">Paper accepted by <strong>EMNLP 2026</strong> (main).</span>
+        </li>
+        <li>
+          <span class="news-date">Jun 2026</span>
+          <span class="news-text">Paper <em>A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation</em> accepted by <strong>ISSTA 2026</strong>. Congratulations to Shide!</span>
         </li>
         <li>
           <span class="news-date">May 2026</span>
