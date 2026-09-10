@@ -499,10 +499,10 @@
     }
 
     /* ── Publication Table (daoyuan style) ──────── */
-    .pub-table { width: 100%; border-collapse: collapse; }
+    .pub-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
     .pub-table tr { border-bottom: 1px solid var(--gray-100); }
     .pub-table tr:hover { background: var(--gray-50); }
-    .pub-table td { padding: 0.85rem 0.5rem; vertical-align: top; }
+    .pub-table td { padding: 0.85rem 0.5rem; vertical-align: top; overflow-wrap: break-word; }
     .pub-id-cell { width: 44px; text-align: center; padding-top: 1rem !important; }
     .pub-num-badge {
       display: inline-block; font-size: 0.7rem; font-weight: 700;
@@ -598,6 +598,12 @@
       .timeline li::before { display: none; }
 
       .tl-date { width: 60px; font-size: 0.72rem; }
+
+      .pub-table td { padding: 0.85rem 0.35rem; }
+      .pub-id-cell { width: 42px; }
+      .bib-box { padding: 0.55rem 0.6rem; }
+      .bib-box pre { font-size: 0.66rem; padding-right: 0; }
+      .bib-copy { position: static; display: block; margin: 0 0 0.4rem auto; }
     }
   </style>
 </head>
@@ -904,14 +910,12 @@
                 <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P33">BibTeX</button>
               </div>
               <div class="bib-box" id="bib-P33"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhang2026raset,
-  author        = {Zhang, Zhibo and Li, Yuxi and Ouyang, Zhen and Shi, Ling and Wang, Kailong},
-  title         = {{RASET: Router-Agnostic Safety-Critical Expert Tuning Exposes Localized Safety Enforcement Failures in Mixture-of-Experts LLMs}},
-  booktitle     = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  year          = {2026},
-  publisher     = {Association for Computational Linguistics},
-  eprint        = {2605.29708},
-  archivePrefix = {arXiv},
-  note          = {To appear}
+  author    = {Zhang, Zhibo and Li, Yuxi and Ouyang, Zhen and Shi, Ling and Wang, Kailong},
+  title     = {{RASET: Router-Agnostic Safety-Critical Expert Tuning Exposes Localized Safety Enforcement Failures in Mixture-of-Experts LLMs}},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2026},
+  publisher = {Association for Computational Linguistics},
+  note      = {To appear}
 }</pre></div>
             </td>
           </tr>
@@ -927,13 +931,11 @@
                 <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P32">BibTeX</button>
               </div>
               <div class="bib-box" id="bib-P32"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhou2026temporal,
-  author        = {Zhou, Shide and Wang, Kailong and Shi, Ling and Wang, Haoyu},
-  title         = {{A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation}},
-  booktitle     = {Proceedings of the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
-  year          = {2026},
-  publisher     = {ACM},
-  eprint        = {2607.04784},
-  archivePrefix = {arXiv}
+  author    = {Zhou, Shide and Wang, Kailong and Shi, Ling and Wang, Haoyu},
+  title     = {{A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation}},
+  booktitle = {Proceedings of the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
+  year      = {2026},
+  publisher = {ACM}
 }</pre></div>
             </td>
           </tr>
@@ -1060,13 +1062,11 @@
               <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2512.23511" target="_blank" rel="noopener">Paper</a> <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P26">BibTeX</button>
               </div>
               <div class="bib-box" id="bib-P26"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zheng2026correctness,
-  author        = {Zheng, Xinyi and Li, Ningke and Luan, Xiaokun and Wang, Kailong and Shi, Ling and Sun, Meng and Wang, Haoyu},
-  title         = {{Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving}},
-  booktitle     = {2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
-  year          = {2026},
-  publisher     = {IEEE},
-  eprint        = {2512.23511},
-  archivePrefix = {arXiv}
+  author    = {Zheng, Xinyi and Li, Ningke and Luan, Xiaokun and Wang, Kailong and Shi, Ling and Sun, Meng and Wang, Haoyu},
+  title     = {{Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving}},
+  booktitle = {2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
+  year      = {2026},
+  publisher = {IEEE}
 }</pre></div>
             </td>
           </tr>
