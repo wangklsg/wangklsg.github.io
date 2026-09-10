@@ -34,6 +34,10 @@
       --navy:    #1a2744;
       --blue:    #1a4fc4;
       --blue-lt: #dbeafe;
+      --nus-blue:   #003d7c;   /* NUS Blue */
+      --nus-blue-dk:#002b57;
+      --nus-orange: #ef7c00;   /* NUS Orange */
+      --nus-orange-dk:#c96700;
       --gray-50: #f9fafb;
       --gray-100:#f3f4f6;
       --gray-200:#e5e7eb;
@@ -192,7 +196,7 @@
       flex-shrink: 0;
       width: 16px;
       margin-top: 2px;
-      color: var(--blue);
+      color: var(--nus-blue);
     }
 
     .divider {
@@ -546,9 +550,9 @@
       white-space: nowrap; line-height: 1.5;
     }
     .pbtn-green  { background: #5cb85c; } .pbtn-green:hover  { background: #449d44; }
-    .pbtn-blue   { background: #003d7c; } .pbtn-blue:hover   { background: #002b57; }  /* NUS Blue */
+    .pbtn-blue   { background: var(--nus-blue); }   .pbtn-blue:hover   { background: var(--nus-blue-dk); }
     .pbtn-teal   { background: #5bc0de; cursor: default; }
-    .pbtn-orange { background: #ef7c00; } .pbtn-orange:hover { background: #c96700; }  /* NUS Orange */
+    .pbtn-orange { background: var(--nus-orange); } .pbtn-orange:hover { background: var(--nus-orange-dk); }
     .pbtn-red    { background: #d9534f; } .pbtn-red:hover    { background: #c9302c; }
     button.pbtn { border: none; cursor: pointer; font-family: inherit; }
     /* BibTeX drawer */
@@ -573,11 +577,11 @@
     .gs-btn {
       display: flex; align-items: center; justify-content: center; gap: 0.45rem;
       font-size: 0.83rem; font-weight: 600; padding: 7px 14px;
-      background: #4285f4; color: #fff !important; border-radius: 6px;
+      background: var(--nus-blue); color: #fff !important; border-radius: 6px;
       text-decoration: none !important; transition: background 0.15s;
       margin-top: 0.25rem; width: 100%;
     }
-    .gs-btn:hover { background: #2b6cd4; }
+    .gs-btn:hover { background: var(--nus-blue-dk); }
     .gs-icon { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
 
     /* ── Responsive ──────────────────────────────── */
