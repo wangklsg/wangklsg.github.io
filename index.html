@@ -532,6 +532,25 @@
     .pbtn-teal   { background: #5bc0de; cursor: default; }
     .pbtn-orange { background: #f0ad4e; } .pbtn-orange:hover { background: #ec971f; }
     .pbtn-red    { background: #d9534f; } .pbtn-red:hover    { background: #c9302c; }
+    button.pbtn { border: none; cursor: pointer; font-family: inherit; }
+    /* BibTeX drawer */
+    .bib-box {
+      display: none; position: relative; margin-top: 0.5rem; padding: 0.65rem 0.75rem;
+      background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 4px;
+    }
+    .bib-box.open { display: block; }
+    .bib-box pre {
+      margin: 0; padding-right: 3.5rem; overflow-x: auto; white-space: pre;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.71rem; line-height: 1.55; color: var(--gray-700);
+    }
+    .bib-copy {
+      position: absolute; top: 0.45rem; right: 0.45rem;
+      font-size: 0.68rem; font-family: inherit; padding: 2px 7px;
+      border: 1px solid var(--gray-200); border-radius: 3px;
+      background: #fff; color: var(--gray-500); cursor: pointer;
+    }
+    .bib-copy:hover { background: var(--gray-100); color: var(--gray-900); }
     /* Google Scholar button */
     .gs-btn {
       display: flex; align-items: center; justify-content: center; gap: 0.45rem;
@@ -860,7 +879,17 @@
               <div class="pub-row-detail">IEEE Transactions on Software Engineering (TSE), 2026.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2502.13416" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P34">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P34"><button type="button" class="bib-copy">Copy</button><pre>@article{li2026detecting,
+  author    = {Li, Ningke and Song, Yahui and Li, Yuekang and Shi, Ling and Liu, Yi and Wang, Haoyu and Wang, Kailong},
+  title     = {{Detecting LLM Fact-conflicting Hallucinations Enhanced by Temporal-logic-based Reasoning}},
+  journal   = {IEEE Transactions on Software Engineering},
+  pages     = {1--18},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/TSE.2026.3731191}
+}</pre></div>
             </td>
           </tr>
 
@@ -872,7 +901,18 @@
               <div class="pub-row-detail">In Proc. Conference on Empirical Methods in Natural Language Processing (EMNLP), 2026. <strong>(Main)</strong></div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2605.29708" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P33">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P33"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhang2026raset,
+  author        = {Zhang, Zhibo and Li, Yuxi and Ouyang, Zhen and Shi, Ling and Wang, Kailong},
+  title         = {{RASET: Router-Agnostic Safety-Critical Expert Tuning Exposes Localized Safety Enforcement Failures in Mixture-of-Experts LLMs}},
+  booktitle     = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year          = {2026},
+  publisher     = {Association for Computational Linguistics},
+  eprint        = {2605.29708},
+  archivePrefix = {arXiv},
+  note          = {To appear}
+}</pre></div>
             </td>
           </tr>
 
@@ -884,7 +924,17 @@
               <div class="pub-row-detail">In Proc. ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2026.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2607.04784" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P32">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P32"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhou2026temporal,
+  author        = {Zhou, Shide and Wang, Kailong and Shi, Ling and Wang, Haoyu},
+  title         = {{A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation}},
+  booktitle     = {Proceedings of the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
+  year          = {2026},
+  publisher     = {ACM},
+  eprint        = {2607.04784},
+  archivePrefix = {arXiv}
+}</pre></div>
             </td>
           </tr>
 
@@ -896,7 +946,17 @@
               <div class="pub-row-detail">In Proc. ACM International Conference on Multimedia Retrieval (ICMR), 2026.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2504.12747" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P31">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P31"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{wang2026privacy,
+  author    = {Wang, Guanyu and Wang, Kailong and Huang, Yihao and Zhou, Mingyi and Pu, Geguang and Li, Li},
+  title     = {{Privacy Protection Against Personalized Text-to-Image Synthesis via Cross-image Consistency Constraints}},
+  booktitle = {Proceedings of the 2026 International Conference on Multimedia Retrieval},
+  pages     = {2003--2011},
+  year      = {2026},
+  publisher = {ACM},
+  doi       = {10.1145/3805622.3810856}
+}</pre></div>
             </td>
           </tr>
 
@@ -908,7 +968,17 @@
               <div class="pub-row-detail">In Proc. Annual Meeting of the Association for Computational Linguistics (ACL), 2026.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2604.20316" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P30">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P30"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{cheng2026r2if,
+  author    = {Cheng, Aijia and Wang, Kailong and Shi, Ling and Zhao, Yongxin},
+  title     = {{R2IF: Aligning Reasoning with Decisions via Composite Rewards for Interpretable LLM Function Calling}},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {36995--37008},
+  year      = {2026},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2026.acl-long.1715}
+}</pre></div>
             </td>
           </tr>
 
@@ -919,7 +989,19 @@
               <div class="pub-row-authors">Shide Zhou, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Haoyu Wang</div>
               <div class="pub-row-detail">IEEE Transactions on Information Forensics and Security (TIFS), 2026.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2504.00446" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2504.00446" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P29">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P29"><button type="button" class="bib-copy">Copy</button><pre>@article{zhou2026exposing,
+  author    = {Zhou, Shide and Wang, Kailong and Shi, Ling and Wang, Haoyu},
+  title     = {{Exposing the Ghost in the Transformer: Abnormal Detection for Large Language Models via Hidden State Forensics}},
+  journal   = {IEEE Transactions on Information Forensics and Security},
+  volume    = {21},
+  pages     = {4074--4089},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/TIFS.2026.3683279}
+}</pre></div>
             </td>
           </tr>
 
@@ -930,7 +1012,20 @@
               <div class="pub-row-authors">Mark Huasong Meng, Chuan Yan, Yun Hao, Qing Zhang, Zeyu Wang, <u>Kailong Wang</u>, Sin Gee Teo, Guangdong Bai, Jin Song Dong</div>
               <div class="pub-row-detail">IEEE Transactions on Software Engineering (TSE), 2026.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/html/2409.10411v1" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/html/2409.10411v1" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P28">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P28"><button type="button" class="bib-copy">Copy</button><pre>@article{meng2026assessing,
+  author    = {Meng, Mark Huasong and Yan, Chuan and Zhang, Qing and Wang, Zeyu and Wang, Kailong and Teo, Sin G. and Bai, Guangdong and Dong, Jin Song},
+  title     = {{Assessing Privacy Disclosure Compliance of Android Third-Party SDKs}},
+  journal   = {IEEE Transactions on Software Engineering},
+  volume    = {52},
+  number    = {7},
+  pages     = {1995--2012},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/TSE.2026.3676979}
+}</pre></div>
             </td>
           </tr>
 
@@ -941,7 +1036,18 @@
               <div class="pub-row-authors">Fan Yang, Yihao Huang, Ling Shi, Geguang Pu, <u>Kailong Wang</u><sup>#</sup></div>
               <div class="pub-row-detail">In Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026. <strong>(Oral)</strong></div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.11639" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.11639" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P27">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P27"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{yang2026efficient,
+  author    = {Yang, Fan and Huang, Yihao and Shi, Ling and Pu, Geguang and Wang, Kailong},
+  title     = {{Efficient and Effective Universal Adversarial Attack Against Vision-Language Pre-Training Models}},
+  booktitle = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages     = {1536--1540},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/ICASSP55912.2026.11464209}
+}</pre></div>
             </td>
           </tr>
 
@@ -951,7 +1057,17 @@
               <div class="pub-row-title"><b>Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving</b> <span class="pub-venue-inline">ICSE '26</span></div>
               <div class="pub-row-authors">Xinyi Zheng, Ningke Li, Xiaokun Luan, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Meng Sun, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2026.</div>
-              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2512.23511" target="_blank" rel="noopener">Paper</a></div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2512.23511" target="_blank" rel="noopener">Paper</a> <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P26">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P26"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zheng2026correctness,
+  author        = {Zheng, Xinyi and Li, Ningke and Luan, Xiaokun and Wang, Kailong and Shi, Ling and Sun, Meng and Wang, Haoyu},
+  title         = {{Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving}},
+  booktitle     = {2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
+  year          = {2026},
+  publisher     = {IEEE},
+  eprint        = {2512.23511},
+  archivePrefix = {arXiv}
+}</pre></div>
             </td>
           </tr>
 
@@ -961,7 +1077,16 @@
               <div class="pub-row-title"><b>ADARULE: LLM-Driven Natural Language to LTL Conversion via Pattern-Adaptive Rule Induction</b> <span class="pub-venue-inline">ICSE '26</span></div>
               <div class="pub-row-authors">Jiayi Hu, Jingling Sun, Chong Wang, Yihao Huang, Jincao Feng, Yilongfei Xu, Yong Li, <u>Kailong Wang</u>, Weikai Miao, Jin Song Dong, Geguang Pu</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2026.</div>
-              <div class="pub-row-btns"></div>
+              <div class="pub-row-btns">
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P25">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P25"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{hu2026adarule,
+  author    = {Hu, Jiayi and Sun, Jingling and Wang, Chong and Huang, Yihao and Feng, Jincao and Xu, Yilongfei and Li, Yong and Wang, Kailong and Miao, Weikai and Dong, Jin Song and Pu, Geguang},
+  title     = {{ADARULE: LLM-Driven Natural Language to LTL Conversion via Pattern-Adaptive Rule Induction}},
+  booktitle = {2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
+  year      = {2026},
+  publisher = {IEEE}
+}</pre></div>
             </td>
           </tr>
 
@@ -971,7 +1096,19 @@
               <div class="pub-row-title"><b>STEAMROLLER: A Multi-Agent System for Inclusive Automatic Speech Recognition for People who Stutter</b> <span class="pub-venue-inline">AAAI '26</span></div>
               <div class="pub-row-authors">Ziqi Xu, Yi Liu, Yuekang Li, Ling Shi, <u>Kailong Wang</u>, Yongxin Zhao</div>
               <div class="pub-row-detail">In Proc. AAAI Conference on Artificial Intelligence (AAAI), 2026.</div>
-              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2601.10223" target="_blank" rel="noopener">Paper</a></div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2601.10223" target="_blank" rel="noopener">Paper</a> <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P24">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P24"><button type="button" class="bib-copy">Copy</button><pre>@article{xu2026steamroller,
+  author    = {Xu, Ziqi and Liu, Yi and Li, Yuekang and Shi, Ling and Wang, Kailong and Zhao, Yongxin},
+  title     = {{STEAMROLLER: A Multi-Agent System for Inclusive Automatic Speech Recognition for People Who Stutter}},
+  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {40},
+  number    = {46},
+  pages     = {39495--39503},
+  year      = {2026},
+  publisher = {AAAI Press},
+  doi       = {10.1609/aaai.v40i46.41300}
+}</pre></div>
             </td>
           </tr>
 
@@ -981,7 +1118,19 @@
               <div class="pub-row-title"><b>On the Feasibility of Using MultiModal LLMs to Execute AR Social Engineering Attacks</b> <span class="pub-venue-inline">AAAI '26</span></div>
               <div class="pub-row-authors">Ting Bi, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, <u>Kailong Wang</u>, Liting Zhou, Yang Yang, Tianlong Yu</div>
               <div class="pub-row-detail">In Proc. AAAI Conference on Artificial Intelligence (AAAI), 2026.</div>
-              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2504.13209" target="_blank" rel="noopener">Paper</a></div>
+              <div class="pub-row-btns"><a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2504.13209" target="_blank" rel="noopener">Paper</a> <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P23">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P23"><button type="button" class="bib-copy">Copy</button><pre>@article{bi2026feasibility,
+  author    = {Bi, Ting and Ye, Chenghang and Yang, Zheyu and Zhou, Ziyi and Tang, Cui and Tao, Zui and Zhang, Jun and Wang, Kailong and Zhou, Liting and Yang, Yang and Yu, Tianlong},
+  title     = {{On the Feasibility of Using MultiModal LLMs to Execute AR Social Engineering Attacks}},
+  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {40},
+  number    = {45},
+  pages     = {38252--38260},
+  year      = {2026},
+  publisher = {AAAI Press},
+  doi       = {10.1609/aaai.v40i45.41164}
+}</pre></div>
             </td>
           </tr>
 
@@ -1000,7 +1149,17 @@
               <div class="pub-row-authors">Hanxiang Xu, Shenao Wang, Ningke Li, <u>Kailong Wang</u><sup>#</sup>, Yanjie Zhao, Kai Chen, Ting Yu, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2405.04760" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2405.04760" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P22">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P22"><button type="button" class="bib-copy">Copy</button><pre>@article{xu2025large,
+  author    = {Xu, Hanxiang and Wang, Shenao and Li, Ningke and Wang, Kailong and Zhao, Yanjie and Chen, Kai and Yu, Ting and Liu, Yang and Wang, Haoyu},
+  title     = {{Large Language Models for Cyber Security: A Systematic Literature Review}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3769676}
+}</pre></div>
             </td>
           </tr>
 
@@ -1011,7 +1170,18 @@
               <div class="pub-row-authors">Tianlong Yu, Chenghang Ye, Zheyu Yang, Ziyi Zhou, Cui Tang, Zui Tao, Jun Zhang, <u>Kailong Wang</u>, Liting Zhou, Yang Yang, Ting Bi</div>
               <div class="pub-row-detail">In Proc. ACM International Conference on Multimedia (ACM MM), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2505.24458" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2505.24458" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P21">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P21"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{yu2025sear,
+  author    = {Yu, Tianlong and Ye, Chenghang and Yang, Zheyu and Zhou, Ziyi and Tang, Cui and Tao, Zui and Zhang, Jun and Wang, Kailong and Zhou, Liting and Yang, Yang and Bi, Ting},
+  title     = {{SEAR: A Multimodal Dataset for Analyzing AR-LLM-Driven Social Engineering Behaviors}},
+  booktitle = {Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages     = {12981--12987},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3746027.3758245}
+}</pre></div>
             </td>
           </tr>
 
@@ -1022,7 +1192,20 @@
               <div class="pub-row-authors">Yi Liu, Guanyu Wang, Xinyi Zheng, Gelei Deng, <u>Kailong Wang</u><sup>#</sup>, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.18512" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.18512" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P20">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P20"><button type="button" class="bib-copy">Copy</button><pre>@article{liu2026spolre,
+  author    = {Liu, Yi and Wang, Guanyu and Zheng, Xinyi and Deng, Gelei and Wang, Kailong and Liu, Yang and Wang, Haoyu},
+  title     = {{SPOLRE: Semantic Preserving Object Layout Reconstruction for Image Captioning System Testing}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  volume    = {35},
+  number    = {5},
+  pages     = {1--25},
+  year      = {2026},
+  publisher = {ACM},
+  doi       = {10.1145/3748306}
+}</pre></div>
             </td>
           </tr>
 
@@ -1033,7 +1216,20 @@
               <div class="pub-row-authors">Yedi Zhang, Yufan Cai, Xinyue Zuo, Xiaokun Luan, <u>Kailong Wang</u>, Zhe Hou, Yifan Zhang, Zhiyuan Wei, Meng Sun, Jun Sun, Jing Sun, Jin Song Dong</div>
               <div class="pub-row-detail">In Proc. International Conference on Machine Learning (ICML), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2412.06512" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2412.06512" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P19">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P19"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhang2025position,
+  author    = {Zhang, Yedi and Cai, Yufan and Zuo, Xinyue and Luan, Xiaokun and Wang, Kailong and Hou, Zhe and Zhang, Yifan and Wei, Zhiyuan and Sun, Meng and Sun, Jun and Sun, Jing and Dong, Jin Song},
+  title     = {{Position: Trustworthy AI Agents Require the Integration of Large Language Models and Formal Methods}},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {267},
+  pages     = {82441--82459},
+  year      = {2025},
+  publisher = {PMLR},
+  url       = {https://proceedings.mlr.press/v267/zhang25ds.html}
+}</pre></div>
             </td>
           </tr>
 
@@ -1044,7 +1240,20 @@
               <div class="pub-row-authors">Shide Zhou, Tianlin Li, <u>Kailong Wang</u><sup>#</sup>, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.20281" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2407.20281" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P18">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P18"><button type="button" class="bib-copy">Copy</button><pre>@article{zhou2025neusemslice,
+  author    = {Zhou, Shide and Li, Tianlin and Huang, Yihao and Shi, Ling and Wang, Kailong and Liu, Yang and Wang, Haoyu},
+  title     = {{NeuSemSlice: Towards Effective DNN Model Maintenance via Neuron-Level Semantic Slicing}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  volume    = {35},
+  number    = {1},
+  pages     = {1--27},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3731556}
+}</pre></div>
             </td>
           </tr>
 
@@ -1055,7 +1264,18 @@
               <div class="pub-row-authors">Shide Zhou, Tianlin Li, <u>Kailong Wang</u><sup>#</sup>, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.15207" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.15207" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P17">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P17"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhou2025understanding,
+  author    = {Zhou, Shide and Li, Tianlin and Wang, Kailong and Huang, Yihao and Shi, Ling and Liu, Yang and Wang, Haoyu},
+  title     = {{Understanding the Effectiveness of Coverage Criteria for Large Language Models: A Special Angle from Jailbreak Attacks}},
+  booktitle = {2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)},
+  pages     = {730--742},
+  year      = {2025},
+  publisher = {IEEE},
+  doi       = {10.1109/ICSE55347.2025.00209}
+}</pre></div>
             </td>
           </tr>
 
@@ -1066,7 +1286,18 @@
               <div class="pub-row-authors">Yuqing Nie, Chong Wang, <u>Kailong Wang</u><sup>#</sup>, Guoai Xu, Guosheng Xu, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Software Engineering (ICSE), 2025.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.08858" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2410.08858" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P16">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P16"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{nie2025decoding,
+  author    = {Nie, Yuqing and Wang, Chong and Wang, Kailong and Xu, Guoai and Xu, Guosheng and Wang, Haoyu},
+  title     = {{Decoding Secret Memorization in Code LLMs Through Token-Level Characterization}},
+  booktitle = {2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)},
+  pages     = {2880--2892},
+  year      = {2025},
+  publisher = {IEEE},
+  doi       = {10.1109/ICSE55347.2025.00229}
+}</pre></div>
             </td>
           </tr>
 
@@ -1085,7 +1316,20 @@
               <div class="pub-row-authors">Shenao Wang, Yuekang Li, <u>Kailong Wang</u><sup>#</sup>, Yi Liu, Hui Li, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2401.03218" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2401.03218" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P15">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P15"><button type="button" class="bib-copy">Copy</button><pre>@article{wang2025miniscope,
+  author    = {Wang, Shenao and Li, Yuekang and Wang, Kailong and Liu, Yi and Li, Hui and Liu, Yang and Wang, Haoyu},
+  title     = {{MiniScope: Automated UI Exploration and Privacy Inconsistency Detection of MiniApps via Two-phase Iterative Hybrid Analysis}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  volume    = {34},
+  number    = {6},
+  pages     = {1--29},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3709351}
+}</pre></div>
             </td>
           </tr>
 
@@ -1096,7 +1340,20 @@
               <div class="pub-row-authors">Xinyi Hou, Yanjie Zhao, Yue Liu, Zhou Yang, <u>Kailong Wang</u>, Li Li, Xiapu Luo, David Lo, John Grundy, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2308.10620" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2308.10620" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P14">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P14"><button type="button" class="bib-copy">Copy</button><pre>@article{hou2024large,
+  author    = {Hou, Xinyi and Zhao, Yanjie and Liu, Yue and Yang, Zhou and Wang, Kailong and Li, Li and Luo, Xiapu and Lo, David and Grundy, John and Wang, Haoyu},
+  title     = {{Large Language Models for Software Engineering: A Systematic Literature Review}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  volume    = {33},
+  number    = {8},
+  pages     = {1--79},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3695988}
+}</pre></div>
             </td>
           </tr>
 
@@ -1107,7 +1364,18 @@
               <div class="pub-row-authors">Zhibo Zhang, Wuxia Bai, Yuxi Li, Mark Huasong Meng, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Li Li, Jun Wang, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04905" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04905" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P13">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P13"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhang2024glitchprober,
+  author    = {Zhang, Zhibo and Bai, Wuxia and Li, Yuxi and Meng, Mark Huasong and Wang, Kailong and Shi, Ling and Li, Li and Wang, Jun and Wang, Haoyu},
+  title     = {{GlitchProber: Advancing Effective Detection and Mitigation of Glitch Tokens in Large Language Models}},
+  booktitle = {Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},
+  pages     = {643--655},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3691620.3695060}
+}</pre></div>
             </td>
           </tr>
 
@@ -1118,7 +1386,18 @@
               <div class="pub-row-authors">Baijun Cheng, Cen Zhang, <u>Kailong Wang</u><sup>#</sup>, Ling Shi, Yang Liu, Haoyu Wang, Yao Guo, Xiangqun Chen</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering (ASE), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04344" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/pdf/2408.04344" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P12">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P12"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{cheng2024semanticenhanced,
+  author    = {Cheng, Baijun and Zhang, Cen and Wang, Kailong and Shi, Ling and Liu, Yang and Wang, Haoyu and Guo, Yao and Li, Ding and Chen, Xiangqun},
+  title     = {{Semantic-Enhanced Indirect Call Analysis with Large Language Models}},
+  booktitle = {Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},
+  pages     = {430--442},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3691620.3695016}
+}</pre></div>
             </td>
           </tr>
 
@@ -1129,7 +1408,18 @@
               <div class="pub-row-authors">Xinyi Zheng, Chen Wei, Shenao Wang, Yanjie Zhao, Peiming Gao, Yuanchao Zhang, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase (ASE), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2409.09356" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2409.09356" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P11">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P11"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zheng2024robust,
+  author    = {Zheng, Xinyi and Wei, Chen and Wang, Shenao and Zhao, Yanjie and Gao, Peiming and Zhang, Yuanchao and Wang, Kailong and Wang, Haoyu},
+  title     = {{Towards Robust Detection of Open Source Software Supply Chain Poisoning Attacks in Industry Environments}},
+  booktitle = {Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},
+  pages     = {1990--2001},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3691620.3695262}
+}</pre></div>
             </td>
           </tr>
 
@@ -1140,7 +1430,18 @@
               <div class="pub-row-authors">Jian Zhao, Shenao Wang, Yanjie Zhao, Xinyi Hou, <u>Kailong Wang</u>, Peiming Gao, Yuanchao Zhang, Chen Wei, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase (ASE), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2409.09368" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2409.09368" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P10">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P10"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{zhao2024models,
+  author    = {Zhao, Jian and Wang, Shenao and Zhao, Yanjie and Hou, Xinyi and Wang, Kailong and Gao, Peiming and Zhang, Yuanchao and Wei, Chen and Wang, Haoyu},
+  title     = {{Models Are Codes: Towards Measuring Malicious Code Poisoning Attacks on Pre-trained Model Hubs}},
+  booktitle = {Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},
+  pages     = {2087--2098},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3691620.3695271}
+}</pre></div>
             </td>
           </tr>
 
@@ -1151,7 +1452,20 @@
               <div class="pub-row-authors">Ningke Li, Yuekang Li, Yi Liu, Ling Shi, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages &amp; Applications (OOPSLA), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2405.00648" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2405.00648" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P9">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P9"><button type="button" class="bib-copy">Copy</button><pre>@article{li2024drowzee,
+  author    = {Li, Ningke and Li, Yuekang and Liu, Yi and Shi, Ling and Wang, Kailong and Wang, Haoyu},
+  title     = {{Drowzee: Metamorphic Testing for Fact-Conflicting Hallucination Detection in Large Language Models}},
+  journal   = {Proceedings of the ACM on Programming Languages},
+  volume    = {8},
+  number    = {OOPSLA2},
+  pages     = {1843--1872},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3689776}
+}</pre></div>
             </td>
           </tr>
 
@@ -1162,7 +1476,20 @@
               <div class="pub-row-authors">Yuxi Li, Yi Liu, Gelei Deng, Ying Zhang, Wenjia Song, Ling Shi, <u>Kailong Wang</u><sup>#</sup>, Yuekang Li, Yang Liu, Haoyu Wang</div>
               <div class="pub-row-detail">In Proc. ACM International Conference on the Foundations of Software Engineering (FSE), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2404.09894" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2404.09894" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P8">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P8"><button type="button" class="bib-copy">Copy</button><pre>@article{li2024glitch,
+  author    = {Li, Yuxi and Liu, Yi and Deng, Gelei and Zhang, Ying and Song, Wenjia and Shi, Ling and Wang, Kailong and Li, Yuekang and Liu, Yang and Wang, Haoyu},
+  title     = {{Glitch Tokens in Large Language Models: Categorization Taxonomy and Effective Detection}},
+  journal   = {Proceedings of the ACM on Software Engineering},
+  volume    = {1},
+  number    = {FSE},
+  pages     = {2075--2097},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3660799}
+}</pre></div>
             </td>
           </tr>
 
@@ -1174,7 +1501,17 @@
               <div class="pub-row-detail">In Proc. AI Foundation Models and Software Engineering (FORGE), 2024.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://arxiv.org/abs/2402.14480" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P7">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P7"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{wang2024metmap,
+  author    = {Wang, Guanyu and Li, Yuekang and Liu, Yi and Deng, Gelei and Li, Tianlin and Xu, Guosheng and Liu, Yang and Wang, Haoyu and Wang, Kailong},
+  title     = {{MeTMaP: Metamorphic Testing for Detecting False Vector Matching Problems in LLM Augmented Generation}},
+  booktitle = {Proceedings of the 2024 IEEE/ACM First International Conference on AI Foundation Models and Software Engineering},
+  pages     = {12--23},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3650105.3652297}
+}</pre></div>
             </td>
           </tr>
 
@@ -1185,7 +1522,20 @@
               <div class="pub-row-authors">Baijun Cheng, Shengming Zhao, <u>Kailong Wang</u><sup>#</sup>, Meizhen Wang, Guangdong Bai, Ruitao Feng, Yao Guo, Lei Ma, Haoyu Wang</div>
               <div class="pub-row-detail">ACM Transactions on Software Engineering and Methodology (TOSEM), 33(5):1–33, 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3641543" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3641543" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P6">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P6"><button type="button" class="bib-copy">Copy</button><pre>@article{cheng2024fidelity,
+  author    = {Cheng, Baijun and Zhao, Shengming and Wang, Kailong and Wang, Meizhen and Bai, Guangdong and Feng, Ruitao and Guo, Yao and Ma, Lei and Wang, Haoyu},
+  title     = {{Beyond Fidelity: Explaining Vulnerability Localization of Learning-Based Detectors}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  volume    = {33},
+  number    = {5},
+  pages     = {1--33},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3641543}
+}</pre></div>
             </td>
           </tr>
 
@@ -1196,7 +1546,18 @@
               <div class="pub-row-authors">Liuhuo Wan, <u>Kailong Wang</u><sup>#</sup>, Kulani Tharaka Mahadewa, Haoyu Wang, Guangdong Bai</div>
               <div class="pub-row-detail">In Proc. ACM Web Conference (WWW), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645721" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645721" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P5">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P5"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{wan2024don,
+  author    = {Wan, Liuhuo and Wang, Kailong and Mahadewa, Kulani and Wang, Haoyu and Bai, Guangdong},
+  title     = {{Don't Bite Off More than You Can Chew: Investigating Excessive Permission Requests in Trigger-Action Integrations}},
+  booktitle = {Proceedings of the ACM Web Conference 2024},
+  pages     = {3106--3116},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3589334.3645721}
+}</pre></div>
             </td>
           </tr>
 
@@ -1207,7 +1568,18 @@
               <div class="pub-row-authors">Liuhuo Wan, <u>Kailong Wang</u><sup>#</sup>, Haoyu Wang, Guangdong Bai</div>
               <div class="pub-row-detail">In Proc. ACM Web Conference (WWW), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645697" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://dl.acm.org/doi/abs/10.1145/3589334.3645697" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P4">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P4"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{wan2024safe,
+  author    = {Wan, Liuhuo and Wang, Kailong and Wang, Haoyu and Bai, Guangdong},
+  title     = {{Is It Safe to Share Your Files? An Empirical Security Analysis of Google Workspace}},
+  booktitle = {Proceedings of the ACM Web Conference 2024},
+  pages     = {1892--1901},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3589334.3645697}
+}</pre></div>
             </td>
           </tr>
 
@@ -1218,7 +1590,17 @@
               <div class="pub-row-authors">Gelei Deng, Yi Liu, Yuekang Li, <u>Kailong Wang</u>, Ying Zhang, Zefeng Li, Haoyu Wang, Tianwei Zhang, Yang Liu</div>
               <div class="pub-row-detail">In Proc. Network and Distributed System Security Symposium (NDSS), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf" target="_blank" rel="noopener">Paper</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P3">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P3"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{deng2024masterkey,
+  author    = {Deng, Gelei and Liu, Yi and Li, Yuekang and Wang, Kailong and Zhang, Ying and Li, Zefeng and Wang, Haoyu and Zhang, Tianwei and Liu, Yang},
+  title     = {{MASTERKEY: Automated Jailbreaking of Large Language Model Chatbots}},
+  booktitle = {Proceedings 2024 Network and Distributed System Security Symposium},
+  year      = {2024},
+  publisher = {Internet Society},
+  doi       = {10.14722/ndss.2024.24188}
+}</pre></div>
             </td>
           </tr>
 
@@ -1230,7 +1612,16 @@
               <div class="pub-row-detail">In Proc. NDSS Workshop on AI System with Confidential Computing (AISCC), 2024.</div>
               <div class="pub-row-btns">
                 <a class="pbtn pbtn-blue" href="https://www.ndss-symposium.org/wp-content/uploads/aiscc2024-18-paper.pdf" target="_blank" rel="noopener">Paper</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P2">BibTeX</button>
               </div>
+              <div class="bib-box" id="bib-P2"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{deng2024pandora,
+  author    = {Deng, Gelei and Liu, Yi and Wang, Kailong and Li, Yuekang and Zhang, Tianwei and Liu, Yang},
+  title     = {{PANDORA: Jailbreak GPTs by Retrieval Augmented Generation Poisoning}},
+  booktitle = {Proceedings 2024 Workshop on AI Systems with Confidential Computing},
+  year      = {2024},
+  publisher = {Internet Society},
+  doi       = {10.14722/aiscc.2024.23018}
+}</pre></div>
             </td>
           </tr>
 
@@ -1241,7 +1632,18 @@
               <div class="pub-row-authors">Yuxi Ling, Yun Hao, Yuyan Wang, <u>Kailong Wang</u>, Guangdong Bai, Jin Song Dong</div>
               <div class="pub-row-detail">In Proc. IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), 2024.</div>
               <div class="pub-row-btns">
-                <a class="pbtn pbtn-blue" href="https://yuxiling.github.io/files/2024010163.pdf" target="_blank" rel="noopener">PDF</a>              </div>
+                <a class="pbtn pbtn-blue" href="https://yuxiling.github.io/files/2024010163.pdf" target="_blank" rel="noopener">PDF</a>
+                <button type="button" class="pbtn pbtn-orange bib-toggle" aria-expanded="false" aria-controls="bib-P1">BibTeX</button>
+              </div>
+              <div class="bib-box" id="bib-P1"><button type="button" class="bib-copy">Copy</button><pre>@inproceedings{ling2024excessive,
+  author    = {Ling, Yuxi and Hao, Yun and Wang, Yuyan and Wang, Kailong and Bai, Guangdong and Dong, Jin Song},
+  title     = {{Essential or Excessive? MINDAEXT: Measuring Data Minimization Practices among Browser Extensions}},
+  booktitle = {2024 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)},
+  pages     = {964--975},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/SANER60148.2024.00104}
+}</pre></div>
             </td>
           </tr>
 
@@ -1366,6 +1768,22 @@
 
 <script>
   document.getElementById("yr").textContent = new Date().getFullYear();
+
+  document.querySelectorAll(".bib-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var box = document.getElementById(btn.getAttribute("aria-controls"));
+      btn.setAttribute("aria-expanded", box.classList.toggle("open") ? "true" : "false");
+    });
+  });
+
+  document.querySelectorAll(".bib-copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      navigator.clipboard.writeText(btn.parentNode.querySelector("pre").textContent).then(function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+      });
+    });
+  });
 </script>
 
 
