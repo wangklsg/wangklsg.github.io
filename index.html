@@ -601,8 +601,17 @@
 
       .pub-table td { padding: 0.85rem 0.35rem; }
       .pub-id-cell { width: 42px; }
-      .bib-box { padding: 0.55rem 0.6rem; }
-      .bib-box pre { font-size: 0.66rem; padding-right: 0; }
+      .bib-box { max-width: 100%; padding: 0.55rem 0.6rem; }
+      .bib-box pre {
+        /* Cap against the viewport, not the table cell: WebKit lets a
+           table cell grow past a fixed column, which dragged the whole
+           page sideways. Wrapping means there is no wide line at all. */
+        max-width: calc(100vw - 7rem);
+        font-size: 0.66rem; padding-right: 0;
+        white-space: pre-wrap; overflow-wrap: anywhere;
+        word-break: break-word; /* fallback for older WebKit */
+        overflow-x: hidden;
+      }
       .bib-copy { position: static; display: block; margin: 0 0 0.4rem auto; }
     }
   </style>
