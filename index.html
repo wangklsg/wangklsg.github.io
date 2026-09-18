@@ -129,11 +129,12 @@
     .sidebar-inner {
       position: sticky;
       top: 72px;
-      max-height: calc(100vh - 72px);
+      max-height: calc(100vh - 100px);
       overflow-y: auto;
       overscroll-behavior: contain;
       scrollbar-width: thin;
       padding-right: 2px;
+      padding-bottom: 1rem;
     }
 
     .sidebar-inner::-webkit-scrollbar { width: 6px; }
@@ -594,7 +595,7 @@
       text-decoration: none !important; transition: background 0.15s;
       margin-top: 0.25rem; width: 100%;
     }
-    .gs-btn:hover { background: var(--nus-blue-dk); }
+    .gs-btn:hover { background: var(--nus-orange); }
     .gs-icon { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
 
     /* ── Responsive ──────────────────────────────── */
@@ -618,6 +619,7 @@
         max-height: none;
         overflow-y: visible;
         padding-right: 0;
+        padding-bottom: 0;
         display: flex;
         flex-wrap: wrap;
         gap: 1.25rem;
@@ -682,7 +684,8 @@
 
       <div class="position">
         <strong>Assistant Professor on Research-Track</strong>
-        Department of ECE, National University of Singapore
+        Department of ECE,<br>
+        National University of Singapore
       </div>
 
       <div class="position">
