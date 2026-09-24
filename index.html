@@ -52,7 +52,8 @@
       --content-max: 820px;
     }
 
-    html { scroll-behavior: smooth; }
+    /* Offset anchor jumps so the sticky nav (52px) doesn't cover section titles */
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
     body {
       font-family: var(--font-sans);
